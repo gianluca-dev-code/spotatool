@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { SEARCH_SUGGESTIONS } from '../../data/tools'
 
 export default function Hero() {
   const navigate = useNavigate()
@@ -62,18 +61,27 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Suggestion tags — cliccabili */}
-      <div className="flex justify-center items-center gap-2 mt-4 flex-wrap opacity-60">
-        <span className="text-[11px] text-slate-600 font-mono tracking-wide mr-1">
-          cercano anche →
-        </span>
-        {SEARCH_SUGGESTIONS.map(tag => (
+      {/* Word cloud decorativo */}
+      <div className="flex justify-center items-center gap-x-3 gap-y-1.5 mt-5 flex-wrap max-w-[520px] mx-auto">
+        {[
+          { text: 'musica', size: 'text-[13px]', opacity: 'opacity-30' },
+          { text: 'rimuovi sfondo', size: 'text-[11px]', opacity: 'opacity-20' },
+          { text: 'video', size: 'text-[15px]', opacity: 'opacity-25' },
+          { text: 'copywriting', size: 'text-[11px]', opacity: 'opacity-20' },
+          { text: 'immagini AI', size: 'text-[13px]', opacity: 'opacity-30' },
+          { text: 'codice', size: 'text-[12px]', opacity: 'opacity-20' },
+          { text: 'voiceover', size: 'text-[11px]', opacity: 'opacity-25' },
+          { text: 'avatar', size: 'text-[12px]', opacity: 'opacity-20' },
+          { text: 'presentazioni', size: 'text-[11px]', opacity: 'opacity-20' },
+          { text: 'ricerca', size: 'text-[13px]', opacity: 'opacity-25' },
+          { text: 'sottotitoli', size: 'text-[11px]', opacity: 'opacity-20' },
+          { text: 'logo', size: 'text-[12px]', opacity: 'opacity-25' },
+        ].map(({ text, size, opacity }) => (
           <span
-            key={tag}
-            onClick={() => navigate(`/explore?search=${encodeURIComponent(tag)}`)}
-            className="px-2.5 py-0.5 rounded-md bg-white/[0.03] border border-white/[0.06] text-[11px] text-slate-600 font-mono tracking-wide cursor-pointer transition-all hover:text-slate-400 hover:border-brand/20 hover:bg-brand/[0.04]"
+            key={text}
+            className={`${size} ${opacity} text-slate-400 font-mono tracking-wide cursor-default select-none`}
           >
-            {tag}
+            {text}
           </span>
         ))}
       </div>
