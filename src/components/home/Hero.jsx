@@ -64,21 +64,20 @@ export default function Hero() {
       {/* Word cloud decorativo */}
       <div className="relative mt-6 h-[72px] max-w-[600px] mx-auto select-none pointer-events-none">
         {[
-          { text: 'musica',         color: 'text-brand/40',        size: 'text-[15px]', top: '0px',   left: '10%'  },
-          { text: 'rimuovi sfondo', color: 'text-slate-500/40',    size: 'text-[11px]', top: '8px',   left: '30%'  },
-          { text: 'video',          color: 'text-violet-400/40',   size: 'text-[18px]', top: '2px',   left: '54%'  },
-          { text: 'copywriting',    color: 'text-slate-500/30',    size: 'text-[10px]', top: '36px',  left: '5%'   },
-          { text: 'immagini AI',    color: 'text-brand/50',        size: 'text-[13px]', top: '32px',  left: '28%'  },
-          { text: 'codice',         color: 'text-violet-300/35',   size: 'text-[12px]', top: '30px',  left: '60%'  },
-          { text: 'voiceover',      color: 'text-slate-400/30',    size: 'text-[11px]', top: '56px',  left: '15%'  },
-          { text: 'avatar',         color: 'text-brand/30',        size: 'text-[13px]', top: '52px',  left: '42%'  },
-          { text: 'logo',           color: 'text-violet-400/35',   size: 'text-[11px]', top: '54px',  left: '72%'  },
-          { text: 'sottotitoli',    color: 'text-slate-500/25',    size: 'text-[10px]', top: '14px',  left: '76%'  },
+          { text: 'musica',         color: '#6366f1', size: '15px', top: '0px',  left: '10%' },
+          { text: 'rimuovi sfondo', color: '#94a3b8', size: '11px', top: '8px',  left: '30%' },
+          { text: 'video',          color: '#a78bfa', size: '18px', top: '2px',  left: '54%' },
+          { text: 'copywriting',    color: '#64748b', size: '10px', top: '36px', left: '5%'  },
+          { text: 'immagini AI',    color: '#818cf8', size: '13px', top: '32px', left: '28%' },
+          { text: 'codice',         color: '#c4b5fd', size: '12px', top: '30px', left: '60%' },
+          { text: 'voiceover',      color: '#94a3b8', size: '11px', top: '56px', left: '15%' },
+          { text: 'avatar',         color: '#6366f1', size: '13px', top: '52px', left: '42%' },
+          { text: 'logo',           color: '#a78bfa', size: '11px', top: '54px', left: '72%' },
+          { text: 'sottotitoli',    color: '#64748b', size: '10px', top: '14px', left: '76%' },
         ].map(({ text, color, size, top, left }) => (
           <span
             key={text}
-            className={`absolute font-mono tracking-wide ${size} ${color}`}
-            style={{ top, left }}
+            style={{ color, fontSize: size, top, left, position: 'absolute', fontFamily: 'monospace', letterSpacing: '0.05em' }}
           >
             {text}
           </span>
