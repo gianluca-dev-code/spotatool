@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import BackgroundEffects from '../components/home/BackgroundEffects'
@@ -8,15 +8,20 @@ import { TOOLS, CATEGORIES } from '../data/tools'
 export default function Explore() {
   const [searchParams] = useSearchParams()
   const categoryFromUrl = searchParams.get('category') || null
+  const searchQuery = searchParams.get('search') || ''
+
   const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl)
   const [sortBy, setSortBy] = useState('score')
   const [currentPage, setCurrentPage] = useState(1)
 
-  const searchQuery = searchParams.get('search') || ''
+  // Reset pagina quando cambia la searchQuery dall'URL
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchQuery])
 
   // Filter tools
   const filteredTools = useMemo(() => {
-    let tools = TOOLS
+    let tools = [...TOOLS]
 
     // Search filter
     if (searchQuery) {
@@ -56,6 +61,16 @@ export default function Explore() {
         <h1 className="text-5xl font-black text-gray-100 mb-12">
           Esplora {filteredTools.length} tool AI
         </h1>
+
+        {/* Search attiva — mostra query */}
+        {searchQuery && (
+          <div className="mb-6 flex items-center gap-3">
+            <span className="text-slate-400 text-sm">Risultati per:</span>
+            <span className="px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-sm font-semibold">
+              "{searchQuery}"
+            </span>
+          </div>
+        )}
 
         {/* Category filter */}
         <div className="flex gap-2 mb-8 overflow-x-auto pb-4 flex-wrap">
@@ -152,6 +167,9 @@ export default function Explore() {
           <div className="text-center py-20">
             <p className="text-xl text-slate-500">
               Nessun tool trovato per "{searchQuery}"
+            </p>
+            <p className="text-sm text-slate-600 mt-2">
+              Prova con un termine diverso o sfoglia per categoria
             </p>
           </div>
         )}
