@@ -3,8 +3,6 @@ import BackgroundEffects from '../components/home/BackgroundEffects'
 import Hero from '../components/home/Hero'
 import Stats from '../components/home/Stats'
 import Categories from '../components/home/Categories'
-import Trending from '../components/home/Trending'
-import Comparisons from '../components/home/Comparisons'
 import BottomCTA from '../components/home/BottomCTA'
 
 export default function Landing() {
@@ -15,8 +13,6 @@ export default function Landing() {
       <Hero />
       <Stats />
       <Categories />
-      <Trending />
-      <Comparisons />
       <BottomCTA />
     </div>
   )
