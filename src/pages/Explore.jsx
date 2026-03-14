@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import BackgroundEffects from '../components/home/BackgroundEffects'
 import { ToolCard } from '../components/ui/Cards'
-import { TRENDING_TOOLS, CATEGORIES } from '../data/tools'
+import { TOOLS, CATEGORIES } from '../data/tools'
 
 export default function Explore() {
   const [searchParams] = useSearchParams()
@@ -16,7 +16,7 @@ export default function Explore() {
 
   // Filter tools
   const filteredTools = useMemo(() => {
-    let tools = TRENDING_TOOLS
+    let tools = TOOLS
 
     // Search filter
     if (searchQuery) {
