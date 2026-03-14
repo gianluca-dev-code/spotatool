@@ -62,24 +62,23 @@ export default function Hero() {
       </div>
 
       {/* Word cloud decorativo */}
-      <div className="flex justify-center items-center gap-x-3 gap-y-1.5 mt-5 flex-wrap max-w-[520px] mx-auto">
+      <div className="relative mt-6 h-[72px] max-w-[600px] mx-auto select-none pointer-events-none">
         {[
-          { text: 'musica', size: 'text-[13px]', opacity: 'opacity-30' },
-          { text: 'rimuovi sfondo', size: 'text-[11px]', opacity: 'opacity-20' },
-          { text: 'video', size: 'text-[15px]', opacity: 'opacity-25' },
-          { text: 'copywriting', size: 'text-[11px]', opacity: 'opacity-20' },
-          { text: 'immagini AI', size: 'text-[13px]', opacity: 'opacity-30' },
-          { text: 'codice', size: 'text-[12px]', opacity: 'opacity-20' },
-          { text: 'voiceover', size: 'text-[11px]', opacity: 'opacity-25' },
-          { text: 'avatar', size: 'text-[12px]', opacity: 'opacity-20' },
-          { text: 'presentazioni', size: 'text-[11px]', opacity: 'opacity-20' },
-          { text: 'ricerca', size: 'text-[13px]', opacity: 'opacity-25' },
-          { text: 'sottotitoli', size: 'text-[11px]', opacity: 'opacity-20' },
-          { text: 'logo', size: 'text-[12px]', opacity: 'opacity-25' },
-        ].map(({ text, size, opacity }) => (
+          { text: 'musica',         color: 'text-brand/40',        size: 'text-[15px]', top: '0px',   left: '10%'  },
+          { text: 'rimuovi sfondo', color: 'text-slate-500/40',    size: 'text-[11px]', top: '8px',   left: '30%'  },
+          { text: 'video',          color: 'text-violet-400/40',   size: 'text-[18px]', top: '2px',   left: '54%'  },
+          { text: 'copywriting',    color: 'text-slate-500/30',    size: 'text-[10px]', top: '36px',  left: '5%'   },
+          { text: 'immagini AI',    color: 'text-brand/50',        size: 'text-[13px]', top: '32px',  left: '28%'  },
+          { text: 'codice',         color: 'text-violet-300/35',   size: 'text-[12px]', top: '30px',  left: '60%'  },
+          { text: 'voiceover',      color: 'text-slate-400/30',    size: 'text-[11px]', top: '56px',  left: '15%'  },
+          { text: 'avatar',         color: 'text-brand/30',        size: 'text-[13px]', top: '52px',  left: '42%'  },
+          { text: 'logo',           color: 'text-violet-400/35',   size: 'text-[11px]', top: '54px',  left: '72%'  },
+          { text: 'sottotitoli',    color: 'text-slate-500/25',    size: 'text-[10px]', top: '14px',  left: '76%'  },
+        ].map(({ text, color, size, top, left }) => (
           <span
             key={text}
-            className={`${size} ${opacity} text-slate-400 font-mono tracking-wide cursor-default select-none`}
+            className={`absolute font-mono tracking-wide ${size} ${color}`}
+            style={{ top, left }}
           >
             {text}
           </span>
