@@ -1228,3 +1228,34 @@ export const SEARCH_SUGGESTIONS = [
   'Video editing',
   'Coding assistant'
 ];
+
+export const COMPARISONS = [
+  {
+    id: 'chatgpt-vs-claude',
+    tool_a: 'ChatGPT',
+    tool_b: 'Claude',
+    views: 45000,
+    verdict: 'Claude wins for coding, ChatGPT for general use'
+  },
+  {
+    id: 'midjourney-vs-dalle',
+    tool_a: 'Midjourney',
+    tool_b: 'DALL-E 3',
+    views: 32000,
+    verdict: 'Midjourney for quality, DALL-E for speed'
+  },
+  {
+    id: 'runway-vs-synthesia',
+    tool_a: 'Runway',
+    tool_b: 'Synthesia',
+    views: 28000,
+    verdict: 'Runway for editing, Synthesia for avatars'
+  },
+  {
+    id: 'elevenlabs-vs-murf',
+    tool_a: 'ElevenLabs',
+    tool_b: 'Murf',
+    views: 25000,
+    verdict: 'ElevenLabs for quality, Murf for simplicity'
+  }
+];
