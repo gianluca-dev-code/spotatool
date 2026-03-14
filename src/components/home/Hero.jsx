@@ -25,18 +25,18 @@ export default function Hero() {
 
       {/* Headline */}
       <h1 className="text-5xl md:text-7xl font-black tracking-[-3.5px] leading-[1.06] mb-7">
-        <span className="text-gray-100">L'AI è un </span>
-        <span className="text-gradient-brand">casino.</span>
+        <span className="text-gray-100">AI is a </span>
+        <span className="text-gradient-brand">mess.</span>
         <br />
-        <span className="text-gray-100">Noi la mettiamo </span>
-        <span className="text-gradient-green">in ordine.</span>
+        <span className="text-gray-100">We put it </span>
+        <span className="text-gradient-green">in order.</span>
       </h1>
 
       {/* Subtitle */}
       <p className="text-lg text-slate-500 max-w-[500px] mx-auto mb-11 leading-relaxed">
-        Trova, confronta e scegli il tool AI giusto per qualsiasi cosa.
+        Find, compare and choose the right AI tool for anything.
         <br />
-        Recensito, spiegato, senza bullshit.
+        Reviewed, explained, no bullshit.
       </p>
 
       {/* Search bar */}
@@ -50,30 +50,30 @@ export default function Hero() {
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
           onKeyPress={e => e.key === 'Enter' && handleSearch()}
-          placeholder="Cosa vuoi fare? Es: togliere sfondo, creare musica..."
+          placeholder="What do you want to do? E.g: remove background, create music..."
           className="flex-1 bg-transparent border-none outline-none text-gray-100 text-[14.5px] placeholder:text-slate-600"
         />
-        <button 
+        <button
           onClick={handleSearch}
           className="relative overflow-hidden px-5 py-2.5 rounded-[10px] bg-gradient-to-r from-brand to-violet-600 text-white text-[13.5px] font-semibold whitespace-nowrap hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/30 transition-all"
         >
-          Trova Tool
+          Find Tool
         </button>
       </div>
 
-      {/* Word cloud decorativo */}
+      {/* Word cloud */}
       <div className="relative mt-6 h-[72px] max-w-[600px] mx-auto select-none pointer-events-none">
         {[
-          { text: 'musica',         color: '#6366f1', size: '15px', top: '0px',  left: '10%' },
-          { text: 'rimuovi sfondo', color: '#94a3b8', size: '11px', top: '8px',  left: '30%' },
-          { text: 'video',          color: '#a78bfa', size: '18px', top: '2px',  left: '54%' },
-          { text: 'copywriting',    color: '#64748b', size: '10px', top: '36px', left: '5%'  },
-          { text: 'immagini AI',    color: '#818cf8', size: '13px', top: '32px', left: '28%' },
-          { text: 'codice',         color: '#c4b5fd', size: '12px', top: '30px', left: '60%' },
-          { text: 'voiceover',      color: '#94a3b8', size: '11px', top: '56px', left: '15%' },
-          { text: 'avatar',         color: '#6366f1', size: '13px', top: '52px', left: '42%' },
-          { text: 'logo',           color: '#a78bfa', size: '11px', top: '54px', left: '72%' },
-          { text: 'sottotitoli',    color: '#64748b', size: '10px', top: '14px', left: '76%' },
+          { text: 'music',            color: '#6366f1', size: '15px', top: '0px',  left: '10%' },
+          { text: 'remove background',color: '#94a3b8', size: '11px', top: '8px',  left: '28%' },
+          { text: 'video',            color: '#a78bfa', size: '18px', top: '2px',  left: '60%' },
+          { text: 'copywriting',      color: '#64748b', size: '10px', top: '36px', left: '5%'  },
+          { text: 'AI images',        color: '#818cf8', size: '13px', top: '32px', left: '28%' },
+          { text: 'coding',           color: '#c4b5fd', size: '12px', top: '30px', left: '60%' },
+          { text: 'voiceover',        color: '#94a3b8', size: '11px', top: '56px', left: '15%' },
+          { text: 'avatar',           color: '#6366f1', size: '13px', top: '52px', left: '42%' },
+          { text: 'logo',             color: '#a78bfa', size: '11px', top: '54px', left: '72%' },
+          { text: 'captions',         color: '#64748b', size: '10px', top: '14px', left: '76%' },
         ].map(({ text, color, size, top, left }) => (
           <span
             key={text}

@@ -40,7 +40,7 @@ export function ToolCard({ tool }) {
       </div>
 
       <div className="w-full py-2 bg-gradient-to-r from-brand to-violet-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-brand/30 transition-all text-sm text-center">
-        Visita il sito →
+        Visit website →
       </div>
     </a>
   )

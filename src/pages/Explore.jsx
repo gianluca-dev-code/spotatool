@@ -76,10 +76,10 @@ export default function Explore() {
             ) : (
               <div className="text-center py-20">
                 <p className="text-xl text-slate-500">
-                  Nessun tool trovato per "{searchQuery}"
+                  No tools found for "{searchQuery}"
                 </p>
                 <p className="text-sm text-slate-600 mt-2">
-                  Prova con un termine diverso o sfoglia per categoria
+                  Try a different term or browse by category
                 </p>
               </div>
             )}
@@ -88,7 +88,7 @@ export default function Explore() {
           // MODALITÀ NORMALE — categorie + filtri + paginazione
           <>
             <h1 className="text-5xl font-black text-gray-100 mb-12">
-              Esplora {filteredTools.length} tool AI
+              Explore {filteredTools.length} AI tools
             </h1>
 
             {/* Category filter */}
@@ -150,7 +150,7 @@ export default function Explore() {
                       disabled={currentPage === 1}
                       className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
-                      Indietro
+                      Back
                     </button>
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                       <button
@@ -170,14 +170,14 @@ export default function Explore() {
                       disabled={currentPage === totalPages}
                       className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
-                      Avanti
+                      Next
                     </button>
                   </div>
                 )}
               </>
             ) : (
               <div className="text-center py-20">
-                <p className="text-xl text-slate-500">Nessun tool in questa categoria</p>
+                <p className="text-xl text-slate-500">No tools in this category</p>
               </div>
             )}
           </>
