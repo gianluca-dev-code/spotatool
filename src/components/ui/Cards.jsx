@@ -22,23 +22,27 @@ export function TrendBadge({ trend }) {
 
 export function ToolCard({ tool }) {
   return (
-    <div className="group bg-dark-900 border border-brand/10 rounded-lg p-6 hover:border-brand/30 hover:shadow-lg hover:shadow-brand/10 transition-all cursor-pointer">
+    <a href={tool.website_url} target="_blank" rel="noopener noreferrer" className="block group bg-dark-900 border border-brand/10 rounded-lg p-6 hover:border-brand/30 hover:shadow-lg hover:shadow-brand/10 transition-all cursor-pointer h-full flex flex-col">
       <div className="flex items-start justify-between mb-4">
         <div className="text-5xl">{tool.logo}</div>
         <TrendBadge trend={tool.trend} />
       </div>
 
       <h3 className="text-lg font-bold text-gray-100 mb-2">{tool.name}</h3>
-      <p className="text-sm text-slate-500 mb-4 line-clamp-2">{tool.description}</p>
+      <p className="text-sm text-slate-500 mb-4 line-clamp-2 flex-grow">{tool.description}</p>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
         <ScoreBadge score={tool.score} />
         <div className="text-xs text-slate-500">
           <div>{tool.users} users</div>
           <div>{tool.pricing.free_tier ? 'Free' : `$${tool.pricing.starting_price}`}</div>
         </div>
       </div>
-    </div>
+
+      <button className="w-full py-2 bg-gradient-to-r from-brand to-violet-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-brand/30 transition-all text-sm">
+        Visita il sito →
+      </button>
+    </a>
   )
 }
 
