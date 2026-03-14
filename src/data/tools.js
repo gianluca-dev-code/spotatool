@@ -1,7 +1,5 @@
-// Minimal tools configuration
-// All 50 AI tools will be fetched from Firestore
-
 export const CATEGORIES = [
+  
   { id: 'writing', name: 'Writing', icon: '✍️' },
   { id: 'images', name: 'Images', icon: '🖼️' },
   { id: 'video', name: 'Video', icon: '🎬' },
@@ -10,8 +8,10 @@ export const CATEGORIES = [
   { id: 'business', name: 'Business', icon: '📊' },
   { id: 'voice', name: 'Voice', icon: '🎙️' },
   { id: 'research', name: 'Research', icon: '🔬' }
-  
+
 ];
+
+export const TOOLS = [];
 
 export const SEARCH_SUGGESTIONS = [
   'Scrivere una canzone',
