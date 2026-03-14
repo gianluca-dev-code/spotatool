@@ -1,14 +1,12 @@
 export function ScoreBadge({ score }) {
-  const getColor = (score) => {
-    if (score >= 9) return 'text-emerald-400'
-    if (score >= 8) return 'text-blue-400'
-    if (score >= 7) return 'text-yellow-400'
-    return 'text-orange-400'
-  }
-
+  let color = 'text-orange-500'
+  if (score >= 9) color = 'text-emerald-400'
+  else if (score >= 8) color = 'text-blue-400'
+  else if (score >= 7) color = 'text-yellow-400'
+  
   return (
-    <div className={`text-2xl font-black ${getColor(score)}`}>
-      {score.toFixed(1)}
+    <div className={`text-sm font-bold ${color}`}>
+      {score.toFixed(1)}/10
     </div>
   )
 }
@@ -16,13 +14,8 @@ export function ScoreBadge({ score }) {
 export function TrendBadge({ trend }) {
   const isPositive = trend >= 0
   return (
-    <div className={`flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold ${
-      isPositive 
-        ? 'bg-emerald-500/10 text-emerald-400' 
-        : 'bg-red-500/10 text-red-400'
-    }`}>
-      <span>{isPositive ? '↑' : '↓'}</span>
-      <span>{Math.abs(trend)}%</span>
+    <div className={`text-xs font-semibold ${isPositive ? 'text-emerald-400' : 'text-red-400'}`}>
+      {isPositive ? '↑' : '↓'} {Math.abs(trend)}%
     </div>
   )
 }
