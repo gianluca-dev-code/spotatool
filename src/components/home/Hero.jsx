@@ -62,12 +62,15 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Suggestion tags — solo decorativi */}
-      <div className="flex justify-center gap-1.5 mt-3.5 flex-wrap">
+      {/* Suggestion tags — decorativi */}
+      <div className="flex justify-center items-center gap-2 mt-4 flex-wrap opacity-60">
+        <span className="text-[11px] text-slate-600 font-mono tracking-wide mr-1">
+          cercano anche →
+        </span>
         {SEARCH_SUGGESTIONS.map(tag => (
           <span
             key={tag}
-            className="px-3 py-1 rounded-md bg-white/[0.02] border border-white/[0.05] text-[11.5px] text-slate-500 font-mono tracking-wide cursor-default"
+            className="px-2.5 py-0.5 rounded-md bg-white/[0.03] border border-white/[0.06] text-[11px] text-slate-600 font-mono tracking-wide cursor-default transition-all hover:text-slate-400 hover:border-brand/20 hover:bg-brand/[0.04]"
           >
             {tag}
           </span>
