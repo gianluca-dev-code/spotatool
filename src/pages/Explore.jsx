@@ -27,7 +27,8 @@ export default function Explore() {
     if (searchQuery) {
       tools = tools.filter(tool =>
         tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.description.toLowerCase().includes(searchQuery.toLowerCase())
+        tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (tool.keywords && tool.keywords.toLowerCase().includes(searchQuery.toLowerCase()))
       )
     }
 

@@ -21,24 +21,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '🤖',
     description: 'Conversational AI for writing, coding, analysis, and brainstorming',
+    keywords: 'scrittura testo chat intelligenza artificiale analisi brainstorming scrivere articoli contenuti',
     website_url: 'https://chatgpt.com',
     affiliate_url: null,
     score: 9.4,
     total_reviews: 2847,
-    scores_breakdown: {
-      ease_of_use: 9.5,
-      output_quality: 9.3,
-      value_for_money: 8.9,
-      features: 9.4
-    },
+    scores_breakdown: { ease_of_use: 9.5, output_quality: 9.3, value_for_money: 8.9, features: 9.4 },
     trend: 42,
     users: '100M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 20,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
     features: ['Chat interface', 'Code generation', 'Document analysis', 'Creative writing', 'Multimodal input']
   },
   {
@@ -48,24 +39,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '🧠',
     description: 'Advanced AI assistant by Anthropic, excellent for coding and analysis',
+    keywords: 'assistente ai scrittura codice analisi documenti ricerca testo intelligenza artificiale',
     website_url: 'https://claude.ai',
     affiliate_url: null,
     score: 9.3,
     total_reviews: 1956,
-    scores_breakdown: {
-      ease_of_use: 9.4,
-      output_quality: 9.5,
-      value_for_money: 9.0,
-      features: 9.1
-    },
+    scores_breakdown: { ease_of_use: 9.4, output_quality: 9.5, value_for_money: 9.0, features: 9.1 },
     trend: 58,
     users: '50M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 20,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
     features: ['Long context window', 'Code analysis', 'Document processing', 'Research assistance', 'Writing help']
   },
   {
@@ -75,24 +57,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '✨',
     description: 'Google\'s multimodal AI model for text, images, and video',
+    keywords: 'google ai testo immagini video multimodale scrittura intelligenza artificiale ricerca',
     website_url: 'https://gemini.google.com',
     affiliate_url: null,
     score: 8.8,
     total_reviews: 1234,
-    scores_breakdown: {
-      ease_of_use: 9.0,
-      output_quality: 8.7,
-      value_for_money: 8.8,
-      features: 8.7
-    },
+    scores_breakdown: { ease_of_use: 9.0, output_quality: 8.7, value_for_money: 8.8, features: 8.7 },
     trend: 35,
     users: '30M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Multimodal input', 'Image understanding', 'Web search integration', 'Real-time info', 'Google Workspace integration']
   },
   {
@@ -102,24 +75,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '🚀',
     description: 'AI pair programmer for code generation and assistance',
+    keywords: 'programmazione codice coding assistente sviluppo software github completamento automatico',
     website_url: 'https://github.com/features/copilot',
     affiliate_url: null,
     score: 9.1,
     total_reviews: 1678,
-    scores_breakdown: {
-      ease_of_use: 9.3,
-      output_quality: 9.0,
-      value_for_money: 8.7,
-      features: 9.2
-    },
+    scores_breakdown: { ease_of_use: 9.3, output_quality: 9.0, value_for_money: 8.7, features: 9.2 },
     trend: 44,
     users: '5M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: false,
-      starting_price: 10,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: false, starting_price: 10, currency: 'USD' },
     features: ['Code completion', 'PR descriptions', 'Test generation', 'IDE integration', 'Multiple languages']
   },
   {
@@ -129,24 +93,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '📝',
     description: 'AI content creation platform for marketing and copywriting',
+    keywords: 'marketing contenuti copywriting articoli blog social media pubblicità testi scrivere',
     website_url: 'https://www.jasper.ai',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 892,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.3,
-      value_for_money: 8.2,
-      features: 8.5
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.3, value_for_money: 8.2, features: 8.5 },
     trend: 12,
     users: '100K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 39,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 39, currency: 'USD' },
     features: ['Marketing copy', 'Blog writing', 'Social media content', 'Brand voice', 'SEO optimization']
   },
   {
@@ -156,24 +111,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '✏️',
     description: 'AI writing assistant for grammar, clarity, and tone',
+    keywords: 'grammatica correzione testo scrittura errori ortografia tono chiarezza inglese',
     website_url: 'https://www.grammarly.com',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 1245,
-    scores_breakdown: {
-      ease_of_use: 9.2,
-      output_quality: 8.5,
-      value_for_money: 8.3,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 9.2, output_quality: 8.5, value_for_money: 8.3, features: 8.6 },
     trend: 18,
     users: '30M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 12,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 12, currency: 'USD' },
     features: ['Grammar checking', 'Tone detection', 'Plagiarism detection', 'Style guide', 'Browser extension']
   },
   {
@@ -183,24 +129,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '🎯',
     description: 'AI writing tool for content creation and copywriting',
+    keywords: 'scrivere contenuti articoli email pubblicità landing page seo testi marketing',
     website_url: 'https://writesonic.com',
     affiliate_url: null,
     score: 8.3,
     total_reviews: 756,
-    scores_breakdown: {
-      ease_of_use: 8.5,
-      output_quality: 8.2,
-      value_for_money: 8.2,
-      features: 8.3
-    },
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.2, value_for_money: 8.2, features: 8.3 },
     trend: 22,
     users: '50K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 12,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 12, currency: 'USD' },
     features: ['Article generation', 'Email writing', 'Ad copy', 'Landing page', 'SEO content']
   },
   {
@@ -210,24 +147,15 @@ export const TOOLS = [
     category: 'writing',
     logo: '💡',
     description: 'AI features integrated into Notion for writing and content organization',
+    keywords: 'note appunti organizzazione contenuti scrittura riassunto traduzione brainstorming documenti',
     website_url: 'https://www.notion.so',
     affiliate_url: null,
     score: 8.2,
     total_reviews: 634,
-    scores_breakdown: {
-      ease_of_use: 8.9,
-      output_quality: 8.0,
-      value_for_money: 8.2,
-      features: 8.1
-    },
+    scores_breakdown: { ease_of_use: 8.9, output_quality: 8.0, value_for_money: 8.2, features: 8.1 },
     trend: 28,
     users: '20M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 10,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 10, currency: 'USD' },
     features: ['Content generation', 'Document summarization', 'Writing assistance', 'Brainstorming', 'Translation']
   },
 
@@ -239,24 +167,15 @@ export const TOOLS = [
     category: 'images',
     logo: '🎨',
     description: 'AI image generator for creating stunning visual artwork',
+    keywords: 'generare immagini arte grafica disegno illustrazione immagine AI foto creare immagini',
     website_url: 'https://www.midjourney.com',
     affiliate_url: null,
     score: 9.2,
     total_reviews: 2134,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 9.4,
-      value_for_money: 8.9,
-      features: 9.2
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 9.4, value_for_money: 8.9, features: 9.2 },
     trend: 62,
     users: '15M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: false,
-      starting_price: 10,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: false, starting_price: 10, currency: 'USD' },
     features: ['Image generation', 'Image variations', 'Upscaling', 'Inpainting', 'Discord integration']
   },
   {
@@ -266,24 +185,15 @@ export const TOOLS = [
     category: 'images',
     logo: '🖼️',
     description: 'OpenAI\'s image generation model with improved quality and accuracy',
+    keywords: 'generare immagini foto grafica arte disegno openai creare immagini testo immagine',
     website_url: 'https://openai.com/dall-e-3',
     affiliate_url: null,
     score: 9.0,
     total_reviews: 1876,
-    scores_breakdown: {
-      ease_of_use: 9.1,
-      output_quality: 9.2,
-      value_for_money: 8.7,
-      features: 8.9
-    },
+    scores_breakdown: { ease_of_use: 9.1, output_quality: 9.2, value_for_money: 8.7, features: 8.9 },
     trend: 51,
     users: '20M+',
-    pricing: {
-      model: 'pay_per_use',
-      free_tier: false,
-      starting_price: 0.08,
-      currency: 'USD'
-    },
+    pricing: { model: 'pay_per_use', free_tier: false, starting_price: 0.08, currency: 'USD' },
     features: ['Text-to-image', 'Variations', 'Editing', 'High resolution', 'Natural language']
   },
   {
@@ -293,24 +203,15 @@ export const TOOLS = [
     category: 'images',
     logo: '⚡',
     description: 'Open-source image generation model available for free and commercial use',
+    keywords: 'generare immagini open source gratuito arte grafica foto creare immagini personalizzabile',
     website_url: 'https://stablediffusionweb.com',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 1423,
-    scores_breakdown: {
-      ease_of_use: 8.4,
-      output_quality: 8.6,
-      value_for_money: 9.2,
-      features: 8.5
-    },
+    scores_breakdown: { ease_of_use: 8.4, output_quality: 8.6, value_for_money: 9.2, features: 8.5 },
     trend: 38,
     users: '10M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Text-to-image', 'Image-to-image', 'Inpainting', 'Open-source', 'Customizable models']
   },
   {
@@ -320,24 +221,15 @@ export const TOOLS = [
     category: 'images',
     logo: '🔥',
     description: 'Adobe\'s generative AI tool integrated into Creative Cloud',
+    keywords: 'adobe photoshop grafica design immagini generare arte creativa editing foto',
     website_url: 'https://www.adobe.com/products/firefly.html',
     affiliate_url: null,
     score: 8.8,
     total_reviews: 945,
-    scores_breakdown: {
-      ease_of_use: 9.0,
-      output_quality: 8.8,
-      value_for_money: 8.5,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 9.0, output_quality: 8.8, value_for_money: 8.5, features: 8.8 },
     trend: 45,
     users: '5M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 4.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 4.99, currency: 'USD' },
     features: ['Generative fill', 'Text-to-image', 'Creative variations', 'Photoshop integration', 'Adobe Firefly credit']
   },
   {
@@ -347,24 +239,15 @@ export const TOOLS = [
     category: 'images',
     logo: '🎭',
     description: 'Design platform with AI features for creating graphics and presentations',
+    keywords: 'design grafica presentazioni loghi social media immagini creare grafiche template',
     website_url: 'https://www.canva.com',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 1567,
-    scores_breakdown: {
-      ease_of_use: 9.3,
-      output_quality: 8.3,
-      value_for_money: 8.6,
-      features: 8.4
-    },
+    scores_breakdown: { ease_of_use: 9.3, output_quality: 8.3, value_for_money: 8.6, features: 8.4 },
     trend: 33,
     users: '150M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 14.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 14.99, currency: 'USD' },
     features: ['Image generation', 'Design templates', 'AI background removal', 'Text effects', 'Drag-and-drop editor']
   },
   {
@@ -374,24 +257,15 @@ export const TOOLS = [
     category: 'images',
     logo: '✂️',
     description: 'AI background remover for images with one click',
+    keywords: 'togliere sfondo rimuovere sfondo foto immagini background removal ritagliare',
     website_url: 'https://www.remove.bg',
     affiliate_url: null,
     score: 8.9,
     total_reviews: 1234,
-    scores_breakdown: {
-      ease_of_use: 9.5,
-      output_quality: 8.8,
-      value_for_money: 8.8,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 9.5, output_quality: 8.8, value_for_money: 8.8, features: 8.8 },
     trend: 22,
     users: '50M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0.99, currency: 'USD' },
     features: ['Background removal', 'Batch processing', 'High resolution', 'API access', 'Mobile app']
   },
   {
@@ -401,24 +275,15 @@ export const TOOLS = [
     category: 'images',
     logo: '📈',
     description: 'Free open-source AI image upscaler for improving image quality',
+    keywords: 'migliorare qualità immagini upscale ingrandire foto aumentare risoluzione immagine',
     website_url: 'https://upscayl.github.io',
     affiliate_url: null,
     score: 8.4,
     total_reviews: 567,
-    scores_breakdown: {
-      ease_of_use: 8.6,
-      output_quality: 8.3,
-      value_for_money: 9.5,
-      features: 8.2
-    },
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.3, value_for_money: 9.5, features: 8.2 },
     trend: 41,
     users: '1M+',
-    pricing: {
-      model: 'free',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'free', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Image upscaling', 'Batch processing', 'Multiple models', 'Open-source', 'No watermarks']
   },
 
@@ -430,24 +295,15 @@ export const TOOLS = [
     category: 'video',
     logo: '🎬',
     description: 'AI video generation and editing platform for creators',
+    keywords: 'generare video editing video creatori contenuti video ai creare video',
     website_url: 'https://runwayml.com',
     affiliate_url: null,
     score: 9.1,
     total_reviews: 1456,
-    scores_breakdown: {
-      ease_of_use: 8.9,
-      output_quality: 9.2,
-      value_for_money: 8.8,
-      features: 9.1
-    },
+    scores_breakdown: { ease_of_use: 8.9, output_quality: 9.2, value_for_money: 8.8, features: 9.1 },
     trend: 67,
     users: '3M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 13,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 13, currency: 'USD' },
     features: ['Video generation', 'Video editing', 'Motion tracking', 'Real-time collaboration', 'Magic tools']
   },
   {
@@ -457,24 +313,15 @@ export const TOOLS = [
     category: 'video',
     logo: '🎥',
     description: 'AI video creation platform with virtual avatars and text-to-video',
+    keywords: 'avatar video presentazioni aziendali testo video voce multilinguae creare video professionali',
     website_url: 'https://www.synthesia.io',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 834,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.6,
-      value_for_money: 8.5,
-      features: 8.7
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.6, value_for_money: 8.5, features: 8.7 },
     trend: 48,
     users: '500K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 30,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 30, currency: 'USD' },
     features: ['Video avatars', 'Text-to-video', 'Lip-sync', 'Multi-language', 'Custom branding']
   },
   {
@@ -484,24 +331,15 @@ export const TOOLS = [
     category: 'video',
     logo: '📹',
     description: 'Collaborative audio and video editing platform with AI transcription',
+    keywords: 'editing video audio trascrizione podcast montaggio video editing automatico',
     website_url: 'https://www.descript.com',
     affiliate_url: null,
     score: 8.8,
     total_reviews: 1023,
-    scores_breakdown: {
-      ease_of_use: 9.0,
-      output_quality: 8.7,
-      value_for_money: 8.7,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 9.0, output_quality: 8.7, value_for_money: 8.7, features: 8.8 },
     trend: 52,
     users: '2M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 12,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 12, currency: 'USD' },
     features: ['Automatic transcription', 'Video/audio editing', 'Screen recording', 'Podcast editing', 'AI voice']
   },
   {
@@ -511,24 +349,15 @@ export const TOOLS = [
     category: 'video',
     logo: '🎭',
     description: 'AI video generation with avatars and voice synthesis',
+    keywords: 'avatar video voce sintesi creare video presentazioni traduzione video ai',
     website_url: 'https://www.heygen.com',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 745,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 8.5,
-      value_for_money: 8.5,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.5, value_for_money: 8.5, features: 8.6 },
     trend: 44,
     users: '1M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 25,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 25, currency: 'USD' },
     features: ['AI avatars', 'Video translation', 'Voice synthesis', 'Template library', 'API access']
   },
   {
@@ -538,24 +367,15 @@ export const TOOLS = [
     category: 'video',
     logo: '✂️',
     description: 'Free video editing app with AI-powered features',
+    keywords: 'video editing montaggio video sottotitoli effetti musica tiktok reels gratuito',
     website_url: 'https://www.capcut.com',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 2156,
-    scores_breakdown: {
-      ease_of_use: 9.2,
-      output_quality: 8.3,
-      value_for_money: 9.4,
-      features: 8.4
-    },
+    scores_breakdown: { ease_of_use: 9.2, output_quality: 8.3, value_for_money: 9.4, features: 8.4 },
     trend: 38,
     users: '500M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Auto captions', 'Background removal', 'Auto zoom', 'Music library', 'Effects library']
   },
 
@@ -567,24 +387,15 @@ export const TOOLS = [
     category: 'music',
     logo: '🎵',
     description: 'AI music generation platform for royalty-free background music',
+    keywords: 'creare musica generare musica musica sottofondo royalty free musica ai canzone',
     website_url: 'https://mubert.com',
     affiliate_url: null,
     score: 8.4,
     total_reviews: 623,
-    scores_breakdown: {
-      ease_of_use: 8.6,
-      output_quality: 8.2,
-      value_for_money: 8.4,
-      features: 8.4
-    },
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.2, value_for_money: 8.4, features: 8.4 },
     trend: 35,
     users: '500K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 14.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 14.99, currency: 'USD' },
     features: ['AI music generation', 'Genre selection', 'Mood-based', 'Royalty-free', 'Customizable length']
   },
   {
@@ -594,24 +405,15 @@ export const TOOLS = [
     category: 'music',
     logo: '🎼',
     description: 'AI music composition tool for creating original background music',
+    keywords: 'creare musica comporre musica sottofondo originale canzone ai musicale generare',
     website_url: 'https://soundraw.io',
     affiliate_url: null,
     score: 8.3,
     total_reviews: 456,
-    scores_breakdown: {
-      ease_of_use: 8.5,
-      output_quality: 8.2,
-      value_for_money: 8.2,
-      features: 8.3
-    },
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.2, value_for_money: 8.2, features: 8.3 },
     trend: 28,
     users: '100K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 9.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 9.99, currency: 'USD' },
     features: ['Music generation', 'Genre selection', 'Mood customization', 'Commercial license', 'No copyright issues']
   },
   {
@@ -621,24 +423,15 @@ export const TOOLS = [
     category: 'music',
     logo: '🎶',
     description: 'OpenAI\'s neural network that generates music with singing',
+    keywords: 'creare musica cantare voce canzone ai openai generare musica con testo',
     website_url: 'https://openai.com/jukebox',
     affiliate_url: null,
     score: 8.1,
     total_reviews: 345,
-    scores_breakdown: {
-      ease_of_use: 7.9,
-      output_quality: 8.2,
-      value_for_money: 8.2,
-      features: 8.1
-    },
+    scores_breakdown: { ease_of_use: 7.9, output_quality: 8.2, value_for_money: 8.2, features: 8.1 },
     trend: 15,
     users: '100K+',
-    pricing: {
-      model: 'free',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'free', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Music generation', 'Singing voice', 'Genre synthesis', 'Artist style transfer', 'Open-source']
   },
   {
@@ -648,24 +441,15 @@ export const TOOLS = [
     category: 'music',
     logo: '🤖',
     description: 'AI music generation focused on electronic and dance music',
+    keywords: 'creare beat musica elettronica dance musica ai generare ritmo bpm',
     website_url: 'https://beatbot.fm',
     affiliate_url: null,
     score: 8.0,
     total_reviews: 267,
-    scores_breakdown: {
-      ease_of_use: 8.2,
-      output_quality: 7.9,
-      value_for_money: 8.1,
-      features: 8.0
-    },
+    scores_breakdown: { ease_of_use: 8.2, output_quality: 7.9, value_for_money: 8.1, features: 8.0 },
     trend: 22,
     users: '50K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 4.99,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 4.99, currency: 'USD' },
     features: ['Beat generation', 'Electronic music', 'BPM control', 'Download options', 'Social sharing']
   },
 
@@ -677,24 +461,15 @@ export const TOOLS = [
     category: 'code',
     logo: '💻',
     description: 'Free AI code completion tool integrated into IDEs',
+    keywords: 'codice programmazione coding completamento automatico sviluppo software gratis ide',
     website_url: 'https://codeium.com',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 892,
-    scores_breakdown: {
-      ease_of_use: 8.9,
-      output_quality: 8.6,
-      value_for_money: 9.4,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.9, output_quality: 8.6, value_for_money: 9.4, features: 8.6 },
     trend: 51,
     users: '1M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Code completion', 'IDE integration', 'Multiple languages', 'Fast inference', 'Free tier']
   },
   {
@@ -704,24 +479,15 @@ export const TOOLS = [
     category: 'code',
     logo: '📖',
     description: 'AI code completion with whole-line and full-function completions',
+    keywords: 'codice programmazione completamento automatico sviluppo software ide privacy',
     website_url: 'https://www.tabnine.com',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 634,
-    scores_breakdown: {
-      ease_of_use: 8.6,
-      output_quality: 8.4,
-      value_for_money: 8.4,
-      features: 8.5
-    },
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.4, value_for_money: 8.4, features: 8.5 },
     trend: 36,
     users: '500K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 12,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 12, currency: 'USD' },
     features: ['Code completion', 'Privacy focused', 'IDE extensions', 'Team features', 'API integration']
   },
   {
@@ -731,24 +497,15 @@ export const TOOLS = [
     category: 'code',
     logo: '👻',
     description: 'AI coding assistant built into the Replit IDE',
+    keywords: 'codice programmazione coding assistente bug fix spiegazione replit sviluppo',
     website_url: 'https://replit.com/ai',
     affiliate_url: null,
     score: 8.4,
     total_reviews: 512,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 8.3,
-      value_for_money: 8.4,
-      features: 8.3
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.3, value_for_money: 8.4, features: 8.3 },
     trend: 42,
     users: '500K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 7,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 7, currency: 'USD' },
     features: ['Code generation', 'Bug fixing', 'Explanation', 'Replit integration', 'Collaborative coding']
   },
   {
@@ -758,24 +515,15 @@ export const TOOLS = [
     category: 'code',
     logo: '🪬',
     description: 'AWS AI code generation tool for developers',
+    keywords: 'codice programmazione aws amazon sviluppo cloud sicurezza gratis sviluppatori',
     website_url: 'https://aws.amazon.com/codewhisperer',
     affiliate_url: null,
     score: 8.3,
     total_reviews: 423,
-    scores_breakdown: {
-      ease_of_use: 8.4,
-      output_quality: 8.2,
-      value_for_money: 8.4,
-      features: 8.2
-    },
+    scores_breakdown: { ease_of_use: 8.4, output_quality: 8.2, value_for_money: 8.4, features: 8.2 },
     trend: 31,
     users: '100K+',
-    pricing: {
-      model: 'free',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'free', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Code generation', 'AWS integration', 'Security scanning', 'IDE support', 'Free for individuals']
   },
   {
@@ -785,24 +533,15 @@ export const TOOLS = [
     category: 'code',
     logo: '⬛',
     description: 'AI code generation with community-powered examples',
+    keywords: 'codice programmazione coding snippet generare codice veloce community sviluppo',
     website_url: 'https://www.useblackbox.io',
     affiliate_url: null,
     score: 8.2,
     total_reviews: 345,
-    scores_breakdown: {
-      ease_of_use: 8.4,
-      output_quality: 8.1,
-      value_for_money: 8.3,
-      features: 8.2
-    },
+    scores_breakdown: { ease_of_use: 8.4, output_quality: 8.1, value_for_money: 8.3, features: 8.2 },
     trend: 27,
     users: '200K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Code generation', 'Community examples', 'Browser extension', 'Search code snippets', 'Fast']
   },
 
@@ -814,24 +553,15 @@ export const TOOLS = [
     category: 'business',
     logo: '🔍',
     description: 'AI search engine that provides detailed answers with sources',
+    keywords: 'ricerca risposta fonti motore ricerca ai business analisi domande informazioni',
     website_url: 'https://www.perplexity.ai',
     affiliate_url: null,
     score: 8.8,
     total_reviews: 1123,
-    scores_breakdown: {
-      ease_of_use: 8.9,
-      output_quality: 8.8,
-      value_for_money: 8.7,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 8.9, output_quality: 8.8, value_for_money: 8.7, features: 8.8 },
     trend: 63,
     users: '2M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 20,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
     features: ['Search with sources', 'Real-time info', 'Research', 'Citation', 'Clean UI']
   },
   {
@@ -841,24 +571,15 @@ export const TOOLS = [
     category: 'business',
     logo: '📈',
     description: 'AI data analysis platform for business intelligence',
+    keywords: 'analisi dati grafici report business intelligence excel csv insight azienda',
     website_url: 'https://julius.ai',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 567,
-    scores_breakdown: {
-      ease_of_use: 8.5,
-      output_quality: 8.7,
-      value_for_money: 8.5,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.7, value_for_money: 8.5, features: 8.6 },
     trend: 48,
     users: '100K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: true,
-      starting_price: 29,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: true, starting_price: 29, currency: 'USD' },
     features: ['Data analysis', 'Chart creation', 'Export reports', 'Python integration', 'Real-time insights']
   },
   {
@@ -868,24 +589,15 @@ export const TOOLS = [
     category: 'business',
     logo: '🎯',
     description: 'AI platform for sales conversation intelligence',
+    keywords: 'vendite sales call registrazione analisi conversazioni crm azienda intelligenza commerciale',
     website_url: 'https://www.gong.io',
     affiliate_url: null,
     score: 8.9,
     total_reviews: 834,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 9.0,
-      value_for_money: 8.7,
-      features: 9.0
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 9.0, value_for_money: 8.7, features: 9.0 },
     trend: 54,
     users: '500K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: false,
-      starting_price: 50,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: false, starting_price: 50, currency: 'USD' },
     features: ['Call recording', 'Conversation analysis', 'Coaching insights', 'Pipeline intelligence', 'CRM integration']
   },
   {
@@ -895,24 +607,15 @@ export const TOOLS = [
     category: 'business',
     logo: '☁️',
     description: 'AI-powered CRM features for sales, service, and marketing',
+    keywords: 'crm vendite marketing clienti analisi previsioni azienda salesforce intelligenza artificiale',
     website_url: 'https://www.salesforce.com/ai',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 945,
-    scores_breakdown: {
-      ease_of_use: 8.5,
-      output_quality: 8.8,
-      value_for_money: 8.5,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.8, value_for_money: 8.5, features: 8.8 },
     trend: 41,
     users: '10M+',
-    pricing: {
-      model: 'subscription',
-      free_tier: false,
-      starting_price: 165,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: false, starting_price: 165, currency: 'USD' },
     features: ['Predictive analytics', 'Opportunity scoring', 'Activity recommendations', 'Lead scoring', 'Forecasting']
   },
   {
@@ -922,24 +625,15 @@ export const TOOLS = [
     category: 'business',
     logo: '🔄',
     description: 'AI features built into HubSpot CRM platform',
+    keywords: 'crm marketing email vendite lead azienda automazione clienti hubspot',
     website_url: 'https://www.hubspot.com',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 1234,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.5,
-      value_for_money: 8.7,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.5, value_for_money: 8.7, features: 8.6 },
     trend: 45,
     users: '5M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 45,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 45, currency: 'USD' },
     features: ['Email writing', 'Content creation', 'Lead scoring', 'Chat assistant', 'Sales forecasting']
   },
   {
@@ -949,24 +643,15 @@ export const TOOLS = [
     category: 'business',
     logo: '📅',
     description: 'AI-powered project management platform',
+    keywords: 'gestione progetti task automazione team collaborazione lavoro azienda organizzazione',
     website_url: 'https://monday.com',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 1567,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 8.4,
-      value_for_money: 8.5,
-      features: 8.5
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.4, value_for_money: 8.5, features: 8.5 },
     trend: 38,
     users: '2M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 9,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 9, currency: 'USD' },
     features: ['Task automation', 'Workflow templates', 'AI automation', 'Status updates', 'Team collaboration']
   },
   {
@@ -976,24 +661,15 @@ export const TOOLS = [
     category: 'business',
     logo: '✨',
     description: 'AI features in ClickUp project management platform',
+    keywords: 'gestione progetti task automazione team email riassunto scrittura organizzazione lavoro',
     website_url: 'https://clickup.com',
     affiliate_url: null,
     score: 8.4,
     total_reviews: 1342,
-    scores_breakdown: {
-      ease_of_use: 8.6,
-      output_quality: 8.3,
-      value_for_money: 8.5,
-      features: 8.4
-    },
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.3, value_for_money: 8.5, features: 8.4 },
     trend: 42,
     users: '1M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 5,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 5, currency: 'USD' },
     features: ['Task generation', 'Summaries', 'Email templates', 'Writing assistance', 'Automation']
   },
 
@@ -1005,24 +681,15 @@ export const TOOLS = [
     category: 'voice',
     logo: '🎙️',
     description: 'AI text-to-speech with natural, human-like voices',
+    keywords: 'voce testo parlato sintesi vocale clonazione voce text to speech doppiaggio audio',
     website_url: 'https://elevenlabs.io',
     affiliate_url: null,
     score: 9.2,
     total_reviews: 1456,
-    scores_breakdown: {
-      ease_of_use: 9.3,
-      output_quality: 9.2,
-      value_for_money: 8.9,
-      features: 9.1
-    },
+    scores_breakdown: { ease_of_use: 9.3, output_quality: 9.2, value_for_money: 8.9, features: 9.1 },
     trend: 71,
     users: '2M+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 5,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 5, currency: 'USD' },
     features: ['Text-to-speech', 'Voice cloning', 'Natural voices', 'Multiple languages', 'API access']
   },
   {
@@ -1032,24 +699,15 @@ export const TOOLS = [
     category: 'voice',
     logo: '🔊',
     description: 'Google\'s cloud text-to-speech service',
+    keywords: 'voce testo parlato google sintesi vocale audio text to speech cloud',
     website_url: 'https://cloud.google.com/text-to-speech',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 678,
-    scores_breakdown: {
-      ease_of_use: 8.6,
-      output_quality: 8.4,
-      value_for_money: 8.6,
-      features: 8.4
-    },
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.4, value_for_money: 8.6, features: 8.4 },
     trend: 24,
     users: '100K+',
-    pricing: {
-      model: 'pay_per_use',
-      free_tier: true,
-      starting_price: 0.004,
-      currency: 'USD'
-    },
+    pricing: { model: 'pay_per_use', free_tier: true, starting_price: 0.004, currency: 'USD' },
     features: ['Multiple voices', 'Multiple languages', 'SSML support', 'Voice effects', 'Audio profiles']
   },
   {
@@ -1059,24 +717,15 @@ export const TOOLS = [
     category: 'voice',
     logo: '🎤',
     description: 'AI voice generator for creating voiceovers',
+    keywords: 'voiceover doppiaggio voce testo parlato sintesi vocale video audio professionale',
     website_url: 'https://murf.ai',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 845,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.7,
-      value_for_money: 8.5,
-      features: 8.7
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.7, value_for_money: 8.5, features: 8.7 },
     trend: 48,
     users: '500K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 14,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 14, currency: 'USD' },
     features: ['AI voiceovers', 'Text-to-speech', 'Voice cloning', 'Video sync', 'Commercial license']
   },
   {
@@ -1086,24 +735,15 @@ export const TOOLS = [
     category: 'voice',
     logo: '🎧',
     description: 'AI voice synthesis integrated in Descript',
+    keywords: 'voce sintesi clonazione voce audio podcast doppiaggio text to speech naturale',
     website_url: 'https://www.descript.com/overdub',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 567,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.5,
-      value_for_money: 8.5,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.5, value_for_money: 8.5, features: 8.6 },
     trend: 35,
     users: '500K+',
-    pricing: {
-      model: 'subscription',
-      free_tier: false,
-      starting_price: 12,
-      currency: 'USD'
-    },
+    pricing: { model: 'subscription', free_tier: false, starting_price: 12, currency: 'USD' },
     features: ['AI voice generation', 'Natural sounding', 'Voice cloning', 'Editing integration', 'Real-time preview']
   },
 
@@ -1115,24 +755,15 @@ export const TOOLS = [
     category: 'research',
     logo: '📚',
     description: 'AI platform for discovering and understanding scientific articles',
+    keywords: 'ricerca scientifica articoli accademici citazioni università studio paper analisi',
     website_url: 'https://scite.ai',
     affiliate_url: null,
     score: 8.8,
     total_reviews: 512,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 8.9,
-      value_for_money: 8.7,
-      features: 8.8
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.9, value_for_money: 8.7, features: 8.8 },
     trend: 52,
     users: '100K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 120,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 120, currency: 'USD' },
     features: ['Citation context', 'Smart citations', 'Research discovery', 'Paper summaries', 'Academic network']
   },
   {
@@ -1142,24 +773,15 @@ export const TOOLS = [
     category: 'research',
     logo: '🔬',
     description: 'AI research assistant for literature reviews',
+    keywords: 'ricerca letteratura paper riassunto accademico università studio analisi scientifica',
     website_url: 'https://elicit.org',
     affiliate_url: null,
     score: 8.6,
     total_reviews: 345,
-    scores_breakdown: {
-      ease_of_use: 8.5,
-      output_quality: 8.7,
-      value_for_money: 8.5,
-      features: 8.6
-    },
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.7, value_for_money: 8.5, features: 8.6 },
     trend: 41,
     users: '50K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Literature search', 'Paper summarization', 'Key findings extraction', 'Research organization', 'CSV export']
   },
   {
@@ -1169,24 +791,15 @@ export const TOOLS = [
     category: 'research',
     logo: '🧪',
     description: 'AI-powered research search engine powered by scientific papers',
+    keywords: 'ricerca scientifica paper università studi analisi sintesi accademico citazioni',
     website_url: 'https://consensus.app',
     affiliate_url: null,
     score: 8.7,
     total_reviews: 434,
-    scores_breakdown: {
-      ease_of_use: 8.8,
-      output_quality: 8.7,
-      value_for_money: 8.6,
-      features: 8.7
-    },
+    scores_breakdown: { ease_of_use: 8.8, output_quality: 8.7, value_for_money: 8.6, features: 8.7 },
     trend: 57,
     users: '200K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Scientific search', 'Study summaries', 'AI synthesis', 'Citation analysis', 'Trend insights']
   },
   {
@@ -1196,24 +809,15 @@ export const TOOLS = [
     category: 'research',
     logo: '📖',
     description: 'AI tool to summarize research papers and documents',
+    keywords: 'riassunto paper documenti ricerca accademico università sintesi punti chiave',
     website_url: 'https://www.scholarcy.com',
     affiliate_url: null,
     score: 8.5,
     total_reviews: 289,
-    scores_breakdown: {
-      ease_of_use: 8.7,
-      output_quality: 8.4,
-      value_for_money: 8.4,
-      features: 8.5
-    },
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.4, value_for_money: 8.4, features: 8.5 },
     trend: 33,
     users: '50K+',
-    pricing: {
-      model: 'freemium',
-      free_tier: true,
-      starting_price: 0,
-      currency: 'USD'
-    },
+    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Paper summaries', 'Key points extraction', 'Browser extension', 'Citation export', 'Flashcard generation']
   }
 ];
@@ -1227,5 +831,4 @@ export const SEARCH_SUGGESTIONS = [
   'Generare immagini',
   'Video editing',
   'Coding assistant'
-  
 ];
