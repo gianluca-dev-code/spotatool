@@ -14,10 +14,6 @@ export default function Hero() {
     }
   }
 
-  const handleSuggestionClick = (tag) => {
-    navigate(`/explore?search=${encodeURIComponent(tag)}`)
-  }
-
   return (
     <section className="relative z-5 text-center px-6 md:px-12 pt-16 md:pt-20 pb-8 max-w-[860px] mx-auto">
       {/* Live badge */}
@@ -66,13 +62,12 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Suggestion tags */}
+      {/* Suggestion tags — solo decorativi */}
       <div className="flex justify-center gap-1.5 mt-3.5 flex-wrap">
         {SEARCH_SUGGESTIONS.map(tag => (
           <span
             key={tag}
-            onClick={() => handleSuggestionClick(tag)}
-            className="px-3 py-1 rounded-md bg-white/[0.02] border border-white/[0.05] text-[11.5px] text-slate-500 font-mono tracking-wide cursor-pointer hover:border-brand/20 hover:text-slate-400 transition-all"
+            className="px-3 py-1 rounded-md bg-white/[0.02] border border-white/[0.05] text-[11.5px] text-slate-500 font-mono tracking-wide cursor-default"
           >
             {tag}
           </span>
