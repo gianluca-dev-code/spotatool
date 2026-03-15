@@ -56,11 +56,10 @@ export default function Explore() {
       <div className="relative z-5 px-6 md:px-12 pt-16 max-w-[1200px] mx-auto">
 
         {searchQuery ? (
-          // MODALITÀ RICERCA — solo risultati, niente filtri
           <>
             <div className="mb-8 flex items-center gap-3 flex-wrap">
               <h1 className="text-4xl font-black text-gray-100">
-                {filteredTools.length} {filteredTools.length === 1 ? 'risultato' : 'risultati'}
+                {filteredTools.length} {filteredTools.length === 1 ? 'result' : 'results'}
               </h1>
               <span className="px-3 py-1 rounded-full bg-brand/10 border border-brand/20 text-brand text-sm font-semibold">
                 "{searchQuery}"
@@ -75,38 +74,23 @@ export default function Explore() {
               </div>
             ) : (
               <div className="text-center py-20">
-                <p className="text-xl text-slate-500">
-                  No tools found for "{searchQuery}"
-                </p>
-                <p className="text-sm text-slate-600 mt-2">
-                  Try a different term or browse by category
-                </p>
+                <p className="text-xl text-slate-500">No tools found for "{searchQuery}"</p>
+                <p className="text-sm text-slate-600 mt-2">Try a different term or browse by category</p>
               </div>
             )}
           </>
         ) : (
-          // MODALITÀ NORMALE — categorie + filtri + paginazione
           <>
             <h1 className="text-5xl font-black text-gray-100 mb-12">
               Explore {filteredTools.length} AI tools
             </h1>
 
-            {/* Category filter */}
+            {/* Category filter — senza Tutti */}
             <div className="flex gap-2 mb-8 overflow-x-auto pb-4 flex-wrap">
-              <button
-                onClick={() => { setSelectedCategory(null); setCurrentPage(1) }}
-                className={`px-4 py-2 rounded-lg whitespace-nowrap font-semibold transition-all ${
-                  selectedCategory === null
-                    ? 'bg-brand text-white'
-                    : 'bg-dark-900 text-slate-400 hover:text-gray-100'
-                }`}
-              >
-                Tutti
-              </button>
               {CATEGORIES.map(cat => (
                 <button
                   key={cat.id}
-                  onClick={() => { setSelectedCategory(cat.id); setCurrentPage(1) }}
+                  onClick={() => { setSelectedCategory(cat.id === selectedCategory ? null : cat.id); setCurrentPage(1) }}
                   className={`px-4 py-2 rounded-lg whitespace-nowrap font-semibold transition-all ${
                     selectedCategory === cat.id
                       ? 'bg-brand text-white'
@@ -130,7 +114,7 @@ export default function Explore() {
                 <option value="newest">Newest</option>
               </select>
               <span className="text-slate-500">
-                {filteredTools.length} tool {filteredTools.length === 1 ? 'trovato' : 'trovati'}
+                {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} found
               </span>
             </div>
 
