@@ -10,7 +10,7 @@ export default function Explore() {
   const categoryFromUrl = searchParams.get('category') || null
   const searchQuery = searchParams.get('search') || ''
 
-  const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl)
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromUrl || 'writing')
   const [sortBy, setSortBy] = useState('score')
   const [currentPage, setCurrentPage] = useState(1)
 
@@ -65,12 +65,9 @@ export default function Explore() {
                 "{searchQuery}"
               </span>
             </div>
-
             {filteredTools.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                {filteredTools.map(tool => (
-                  <ToolCard key={tool.id} tool={tool} />
-                ))}
+                {filteredTools.map(tool => <ToolCard key={tool.id} tool={tool} />)}
               </div>
             ) : (
               <div className="text-center py-20">
@@ -81,16 +78,14 @@ export default function Explore() {
           </>
         ) : (
           <>
-            <h1 className="text-5xl font-black text-gray-100 mb-12">
-              Explore {filteredTools.length} AI tools
-            </h1>
+            <h1 className="text-5xl font-black text-gray-100 mb-10">Explore AI tools</h1>
 
-            {/* Category filter — senza Tutti */}
-            <div className="flex gap-2 mb-8 overflow-x-auto pb-4 flex-wrap">
+            {/* Category filter */}
+            <div className="flex gap-2 mb-8 overflow-x-auto pb-2 flex-wrap">
               {CATEGORIES.map(cat => (
                 <button
                   key={cat.id}
-                  onClick={() => { setSelectedCategory(cat.id === selectedCategory ? null : cat.id); setCurrentPage(1) }}
+                  onClick={() => { setSelectedCategory(cat.id); setCurrentPage(1) }}
                   className={`px-4 py-2 rounded-lg whitespace-nowrap font-semibold transition-all ${
                     selectedCategory === cat.id
                       ? 'bg-brand text-white'
@@ -103,7 +98,7 @@ export default function Explore() {
             </div>
 
             {/* Sort */}
-            <div className="flex gap-4 mb-12 items-center flex-wrap">
+            <div className="flex gap-4 mb-10 items-center flex-wrap">
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
@@ -113,49 +108,21 @@ export default function Explore() {
                 <option value="trending">Trending</option>
                 <option value="newest">Newest</option>
               </select>
-              <span className="text-slate-500">
-                {filteredTools.length} tool{filteredTools.length !== 1 ? 's' : ''} found
-              </span>
+              <span className="text-slate-500">{filteredTools.length} tools found</span>
             </div>
 
-            {/* Tool grid */}
             {filteredTools.length > 0 ? (
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                  {paginatedTools.map(tool => (
-                    <ToolCard key={tool.id} tool={tool} />
-                  ))}
+                  {paginatedTools.map(tool => <ToolCard key={tool.id} tool={tool} />)}
                 </div>
-
                 {totalPages > 1 && (
                   <div className="flex justify-center gap-2 mb-16 flex-wrap">
-                    <button
-                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                      disabled={currentPage === 1}
-                      className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                    >
-                      Back
-                    </button>
+                    <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">Back</button>
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                      <button
-                        key={page}
-                        onClick={() => setCurrentPage(page)}
-                        className={`px-4 py-2 rounded-lg font-semibold transition-all ${
-                          currentPage === page
-                            ? 'bg-brand text-white'
-                            : 'bg-dark-900 text-slate-400 hover:text-gray-100'
-                        }`}
-                      >
-                        {page}
-                      </button>
+                      <button key={page} onClick={() => setCurrentPage(page)} className={`px-4 py-2 rounded-lg font-semibold transition-all ${currentPage === page ? 'bg-brand text-white' : 'bg-dark-900 text-slate-400 hover:text-gray-100'}`}>{page}</button>
                     ))}
-                    <button
-                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                      disabled={currentPage === totalPages}
-                      className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                    >
-                      Next
-                    </button>
+                    <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="px-4 py-2 rounded-lg bg-dark-900 border border-brand/20 hover:border-brand/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all">Next</button>
                   </div>
                 )}
               </>
