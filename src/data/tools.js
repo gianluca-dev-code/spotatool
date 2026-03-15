@@ -1,6 +1,3 @@
-// All AI Tools Data - 50 Real Tools
-// Organized by category with complete information
-
 export const CATEGORIES = [
   { id: 'writing', name: 'Writing', icon: '✍️' },
   { id: 'images', name: 'Images', icon: '🖼️' },
@@ -13,79 +10,7 @@ export const CATEGORIES = [
 ];
 
 export const TOOLS = [
-  // WRITING (8 tools)
-  {
-    id: 'chatgpt',
-    name: 'ChatGPT',
-    slug: 'chatgpt',
-    category: 'writing',
-    logo: '🤖',
-    description: 'Conversational AI for writing, coding, analysis, and brainstorming',
-    keywords: 'scrittura testo chat intelligenza artificiale analisi brainstorming scrivere articoli contenuti',
-    website_url: 'https://chatgpt.com',
-    affiliate_url: null,
-    score: 9.4,
-    total_reviews: 2847,
-    scores_breakdown: { ease_of_use: 9.5, output_quality: 9.3, value_for_money: 8.9, features: 9.4 },
-    trend: 42,
-    users: '100M+',
-    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
-    features: ['Chat interface', 'Code generation', 'Document analysis', 'Creative writing', 'Multimodal input']
-  },
-  {
-    id: 'claude',
-    name: 'Claude',
-    slug: 'claude',
-    category: 'writing',
-    logo: '🧠',
-    description: 'Advanced AI assistant by Anthropic, excellent for coding and analysis',
-    keywords: 'assistente ai scrittura codice analisi documenti ricerca testo intelligenza artificiale',
-    website_url: 'https://claude.ai',
-    affiliate_url: null,
-    score: 9.3,
-    total_reviews: 1956,
-    scores_breakdown: { ease_of_use: 9.4, output_quality: 9.5, value_for_money: 9.0, features: 9.1 },
-    trend: 58,
-    users: '50M+',
-    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
-    features: ['Long context window', 'Code analysis', 'Document processing', 'Research assistance', 'Writing help']
-  },
-  {
-    id: 'gemini',
-    name: 'Google Gemini',
-    slug: 'gemini',
-    category: 'writing',
-    logo: '✨',
-    description: 'Google\'s multimodal AI model for text, images, and video',
-    keywords: 'google ai testo immagini video multimodale scrittura intelligenza artificiale ricerca',
-    website_url: 'https://gemini.google.com',
-    affiliate_url: null,
-    score: 8.8,
-    total_reviews: 1234,
-    scores_breakdown: { ease_of_use: 9.0, output_quality: 8.7, value_for_money: 8.8, features: 8.7 },
-    trend: 35,
-    users: '30M+',
-    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
-    features: ['Multimodal input', 'Image understanding', 'Web search integration', 'Real-time info', 'Google Workspace integration']
-  },
-  {
-    id: 'copilot',
-    name: 'GitHub Copilot',
-    slug: 'copilot',
-    category: 'writing',
-    logo: '🚀',
-    description: 'AI pair programmer for code generation and assistance',
-    keywords: 'programmazione codice coding assistente sviluppo software github completamento automatico',
-    website_url: 'https://github.com/features/copilot',
-    affiliate_url: null,
-    score: 9.1,
-    total_reviews: 1678,
-    scores_breakdown: { ease_of_use: 9.3, output_quality: 9.0, value_for_money: 8.7, features: 9.2 },
-    trend: 44,
-    users: '5M+',
-    pricing: { model: 'subscription', free_tier: false, starting_price: 10, currency: 'USD' },
-    features: ['Code completion', 'PR descriptions', 'Test generation', 'IDE integration', 'Multiple languages']
-  },
+  // WRITING
   {
     id: 'jasper',
     name: 'Jasper',
@@ -158,8 +83,44 @@ export const TOOLS = [
     pricing: { model: 'subscription', free_tier: true, starting_price: 10, currency: 'USD' },
     features: ['Content generation', 'Document summarization', 'Writing assistance', 'Brainstorming', 'Translation']
   },
+  {
+    id: 'surfer-seo',
+    name: 'Surfer SEO',
+    slug: 'surfer-seo',
+    category: 'writing',
+    logo: '🏄',
+    description: 'AI-powered SEO writing and content optimization tool',
+    keywords: 'seo ottimizzazione contenuti articoli google ranking posizionamento scrittura blog',
+    website_url: 'https://surferseo.com',
+    affiliate_url: null,
+    score: 8.6,
+    total_reviews: 934,
+    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.7, value_for_money: 8.4, features: 8.7 },
+    trend: 44,
+    users: '150K+',
+    pricing: { model: 'subscription', free_tier: false, starting_price: 89, currency: 'USD' },
+    features: ['Content editor', 'SERP analyzer', 'Keyword research', 'AI writer', 'Audit tool']
+  },
+  {
+    id: 'rytr',
+    name: 'Rytr',
+    slug: 'rytr',
+    category: 'writing',
+    logo: '✍️',
+    description: 'Affordable AI writing assistant for all content types',
+    keywords: 'scrivere contenuti articoli email social media economico copywriting testi ai',
+    website_url: 'https://rytr.me',
+    affiliate_url: null,
+    score: 8.1,
+    total_reviews: 645,
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.0, value_for_money: 9.0, features: 8.0 },
+    trend: 19,
+    users: '80K+',
+    pricing: { model: 'freemium', free_tier: true, starting_price: 9, currency: 'USD' },
+    features: ['40+ use cases', 'Tone selector', 'SEO analyzer', 'Plagiarism checker', 'Browser extension']
+  },
 
-  // IMAGES (8 tools)
+  // IMAGES
   {
     id: 'midjourney',
     name: 'Midjourney',
@@ -197,24 +158,6 @@ export const TOOLS = [
     features: ['Text-to-image', 'Variations', 'Editing', 'High resolution', 'Natural language']
   },
   {
-    id: 'stablediffusion',
-    name: 'Stable Diffusion',
-    slug: 'stable-diffusion',
-    category: 'images',
-    logo: '⚡',
-    description: 'Open-source image generation model available for free and commercial use',
-    keywords: 'generare immagini open source gratuito arte grafica foto creare immagini personalizzabile',
-    website_url: 'https://stablediffusionweb.com',
-    affiliate_url: null,
-    score: 8.6,
-    total_reviews: 1423,
-    scores_breakdown: { ease_of_use: 8.4, output_quality: 8.6, value_for_money: 9.2, features: 8.5 },
-    trend: 38,
-    users: '10M+',
-    pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
-    features: ['Text-to-image', 'Image-to-image', 'Inpainting', 'Open-source', 'Customizable models']
-  },
-  {
     id: 'adobe-firefly',
     name: 'Adobe Firefly',
     slug: 'adobe-firefly',
@@ -230,7 +173,7 @@ export const TOOLS = [
     trend: 45,
     users: '5M+',
     pricing: { model: 'subscription', free_tier: true, starting_price: 4.99, currency: 'USD' },
-    features: ['Generative fill', 'Text-to-image', 'Creative variations', 'Photoshop integration', 'Adobe Firefly credit']
+    features: ['Generative fill', 'Text-to-image', 'Creative variations', 'Photoshop integration', 'Adobe credits']
   },
   {
     id: 'canva',
@@ -287,7 +230,7 @@ export const TOOLS = [
     features: ['Image upscaling', 'Batch processing', 'Multiple models', 'Open-source', 'No watermarks']
   },
 
-  // VIDEO (6 tools)
+  // VIDEO
   {
     id: 'runway',
     name: 'Runway',
@@ -313,7 +256,7 @@ export const TOOLS = [
     category: 'video',
     logo: '🎥',
     description: 'AI video creation platform with virtual avatars and text-to-video',
-    keywords: 'avatar video presentazioni aziendali testo video voce multilinguae creare video professionali',
+    keywords: 'avatar video presentazioni aziendali testo video voce multilingua creare video professionali',
     website_url: 'https://www.synthesia.io',
     affiliate_url: null,
     score: 8.7,
@@ -378,8 +321,26 @@ export const TOOLS = [
     pricing: { model: 'freemium', free_tier: true, starting_price: 0, currency: 'USD' },
     features: ['Auto captions', 'Background removal', 'Auto zoom', 'Music library', 'Effects library']
   },
+  {
+    id: 'invideo',
+    name: 'InVideo',
+    slug: 'invideo',
+    category: 'video',
+    logo: '🎞️',
+    description: 'AI video creation platform for marketing and social media content',
+    keywords: 'creare video marketing social media youtube tiktok template video ai automazione',
+    website_url: 'https://invideo.io',
+    affiliate_url: null,
+    score: 8.4,
+    total_reviews: 712,
+    scores_breakdown: { ease_of_use: 8.7, output_quality: 8.3, value_for_money: 8.5, features: 8.4 },
+    trend: 36,
+    users: '7M+',
+    pricing: { model: 'freemium', free_tier: true, starting_price: 20, currency: 'USD' },
+    features: ['AI video creation', 'Template library', 'Text-to-video', 'Stock media', 'Auto subtitles']
+  },
 
-  // MUSIC (5 tools)
+  // MUSIC
   {
     id: 'mubert',
     name: 'Mubert',
@@ -417,24 +378,6 @@ export const TOOLS = [
     features: ['Music generation', 'Genre selection', 'Mood customization', 'Commercial license', 'No copyright issues']
   },
   {
-    id: 'jukebox',
-    name: 'Jukebox',
-    slug: 'jukebox',
-    category: 'music',
-    logo: '🎶',
-    description: 'OpenAI\'s neural network that generates music with singing',
-    keywords: 'creare musica cantare voce canzone ai openai generare musica con testo',
-    website_url: 'https://openai.com/jukebox',
-    affiliate_url: null,
-    score: 8.1,
-    total_reviews: 345,
-    scores_breakdown: { ease_of_use: 7.9, output_quality: 8.2, value_for_money: 8.2, features: 8.1 },
-    trend: 15,
-    users: '100K+',
-    pricing: { model: 'free', free_tier: true, starting_price: 0, currency: 'USD' },
-    features: ['Music generation', 'Singing voice', 'Genre synthesis', 'Artist style transfer', 'Open-source']
-  },
-  {
     id: 'beatbot',
     name: 'BeatBot',
     slug: 'beatbot',
@@ -452,8 +395,26 @@ export const TOOLS = [
     pricing: { model: 'freemium', free_tier: true, starting_price: 4.99, currency: 'USD' },
     features: ['Beat generation', 'Electronic music', 'BPM control', 'Download options', 'Social sharing']
   },
+  {
+    id: 'lalal',
+    name: 'LALAL.AI',
+    slug: 'lalal-ai',
+    category: 'music',
+    logo: '🎸',
+    description: 'AI audio splitter to separate vocals and instruments from any track',
+    keywords: 'separare voce strumenti musica audio stem splitter karaoke rimozione vocale',
+    website_url: 'https://www.lalal.ai',
+    affiliate_url: null,
+    score: 8.7,
+    total_reviews: 834,
+    scores_breakdown: { ease_of_use: 9.0, output_quality: 8.7, value_for_money: 8.5, features: 8.6 },
+    trend: 49,
+    users: '2M+',
+    pricing: { model: 'freemium', free_tier: true, starting_price: 15, currency: 'USD' },
+    features: ['Vocal removal', 'Stem splitting', 'High quality output', 'Batch processing', 'API access']
+  },
 
-  // CODE (6 tools)
+  // CODE
   {
     id: 'codeium',
     name: 'Codeium',
@@ -509,24 +470,6 @@ export const TOOLS = [
     features: ['Code generation', 'Bug fixing', 'Explanation', 'Replit integration', 'Collaborative coding']
   },
   {
-    id: 'amazon-codewhisperer',
-    name: 'Amazon CodeWhisperer',
-    slug: 'amazon-codewhisperer',
-    category: 'code',
-    logo: '🪬',
-    description: 'AWS AI code generation tool for developers',
-    keywords: 'codice programmazione aws amazon sviluppo cloud sicurezza gratis sviluppatori',
-    website_url: 'https://aws.amazon.com/codewhisperer',
-    affiliate_url: null,
-    score: 8.3,
-    total_reviews: 423,
-    scores_breakdown: { ease_of_use: 8.4, output_quality: 8.2, value_for_money: 8.4, features: 8.2 },
-    trend: 31,
-    users: '100K+',
-    pricing: { model: 'free', free_tier: true, starting_price: 0, currency: 'USD' },
-    features: ['Code generation', 'AWS integration', 'Security scanning', 'IDE support', 'Free for individuals']
-  },
-  {
     id: 'blackbox',
     name: 'Blackbox',
     slug: 'blackbox',
@@ -545,7 +488,7 @@ export const TOOLS = [
     features: ['Code generation', 'Community examples', 'Browser extension', 'Search code snippets', 'Fast']
   },
 
-  // BUSINESS (8 tools)
+  // BUSINESS
   {
     id: 'perplexity',
     name: 'Perplexity AI',
@@ -601,24 +544,6 @@ export const TOOLS = [
     features: ['Call recording', 'Conversation analysis', 'Coaching insights', 'Pipeline intelligence', 'CRM integration']
   },
   {
-    id: 'salesforce-einstein',
-    name: 'Salesforce Einstein',
-    slug: 'salesforce-einstein',
-    category: 'business',
-    logo: '☁️',
-    description: 'AI-powered CRM features for sales, service, and marketing',
-    keywords: 'crm vendite marketing clienti analisi previsioni azienda salesforce intelligenza artificiale',
-    website_url: 'https://www.salesforce.com/ai',
-    affiliate_url: null,
-    score: 8.7,
-    total_reviews: 945,
-    scores_breakdown: { ease_of_use: 8.5, output_quality: 8.8, value_for_money: 8.5, features: 8.8 },
-    trend: 41,
-    users: '10M+',
-    pricing: { model: 'subscription', free_tier: false, starting_price: 165, currency: 'USD' },
-    features: ['Predictive analytics', 'Opportunity scoring', 'Activity recommendations', 'Lead scoring', 'Forecasting']
-  },
-  {
     id: 'hubspot-ai',
     name: 'HubSpot AI',
     slug: 'hubspot-ai',
@@ -672,8 +597,26 @@ export const TOOLS = [
     pricing: { model: 'freemium', free_tier: true, starting_price: 5, currency: 'USD' },
     features: ['Task generation', 'Summaries', 'Email templates', 'Writing assistance', 'Automation']
   },
+  {
+    id: 'semrush',
+    name: 'SEMrush',
+    slug: 'semrush',
+    category: 'business',
+    logo: '📊',
+    description: 'All-in-one SEO and digital marketing platform with AI features',
+    keywords: 'seo marketing digitale analisi competitor keyword ricerca traffico backlink azienda',
+    website_url: 'https://www.semrush.com',
+    affiliate_url: null,
+    score: 9.0,
+    total_reviews: 2341,
+    scores_breakdown: { ease_of_use: 8.6, output_quality: 9.1, value_for_money: 8.7, features: 9.2 },
+    trend: 55,
+    users: '10M+',
+    pricing: { model: 'subscription', free_tier: true, starting_price: 119, currency: 'USD' },
+    features: ['Keyword research', 'Competitor analysis', 'Site audit', 'Backlink analysis', 'Content marketing']
+  },
 
-  // VOICE (5 tools)
+  // VOICE
   {
     id: 'elevenlabs',
     name: 'ElevenLabs',
@@ -691,24 +634,6 @@ export const TOOLS = [
     users: '2M+',
     pricing: { model: 'freemium', free_tier: true, starting_price: 5, currency: 'USD' },
     features: ['Text-to-speech', 'Voice cloning', 'Natural voices', 'Multiple languages', 'API access']
-  },
-  {
-    id: 'google-tts',
-    name: 'Google Text-to-Speech',
-    slug: 'google-tts',
-    category: 'voice',
-    logo: '🔊',
-    description: 'Google\'s cloud text-to-speech service',
-    keywords: 'voce testo parlato google sintesi vocale audio text to speech cloud',
-    website_url: 'https://cloud.google.com/text-to-speech',
-    affiliate_url: null,
-    score: 8.5,
-    total_reviews: 678,
-    scores_breakdown: { ease_of_use: 8.6, output_quality: 8.4, value_for_money: 8.6, features: 8.4 },
-    trend: 24,
-    users: '100K+',
-    pricing: { model: 'pay_per_use', free_tier: true, starting_price: 0.004, currency: 'USD' },
-    features: ['Multiple voices', 'Multiple languages', 'SSML support', 'Voice effects', 'Audio profiles']
   },
   {
     id: 'murf',
@@ -729,6 +654,24 @@ export const TOOLS = [
     features: ['AI voiceovers', 'Text-to-speech', 'Voice cloning', 'Video sync', 'Commercial license']
   },
   {
+    id: 'speechify',
+    name: 'Speechify',
+    slug: 'speechify',
+    category: 'voice',
+    logo: '🔊',
+    description: 'AI text-to-speech app for listening to any text content',
+    keywords: 'ascoltare testo voce lettura veloce podcast audiolibro text to speech accessibilità',
+    website_url: 'https://speechify.com',
+    affiliate_url: null,
+    score: 8.8,
+    total_reviews: 1123,
+    scores_breakdown: { ease_of_use: 9.2, output_quality: 8.7, value_for_money: 8.6, features: 8.8 },
+    trend: 58,
+    users: '20M+',
+    pricing: { model: 'freemium', free_tier: true, starting_price: 139, currency: 'USD' },
+    features: ['Text-to-speech', 'Speed control', 'Chrome extension', 'Mobile app', 'OCR scanning']
+  },
+  {
     id: 'descript-overdub',
     name: 'Descript Overdub',
     slug: 'descript-overdub',
@@ -747,7 +690,7 @@ export const TOOLS = [
     features: ['AI voice generation', 'Natural sounding', 'Voice cloning', 'Editing integration', 'Real-time preview']
   },
 
-  // RESEARCH (5 tools)
+  // RESEARCH
   {
     id: 'scite',
     name: 'Scite',
