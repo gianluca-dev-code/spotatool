@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom'
+
 export function ScoreBadge({ score }) {
   let color = 'text-orange-500'
   if (score >= 9) color = 'text-emerald-400'
   else if (score >= 8) color = 'text-blue-400'
   else if (score >= 7) color = 'text-yellow-400'
-  
+
   return (
     <div className={`text-sm font-bold ${color}`}>
       {score.toFixed(1)}/10
@@ -21,8 +23,13 @@ export function TrendBadge({ trend }) {
 }
 
 export function ToolCard({ tool }) {
+  const navigate = useNavigate()
+
   return (
-    <a href={tool.website_url} target="_blank" rel="noopener noreferrer" className="block group bg-dark-900 border border-brand/10 rounded-lg p-6 hover:border-brand/30 hover:shadow-lg hover:shadow-brand/10 transition-all cursor-pointer h-full flex flex-col">
+    <div
+      onClick={() => navigate(`/tool/${tool.slug}`)}
+      className="group bg-dark-900 border border-brand/10 rounded-lg p-6 hover:border-brand/30 hover:shadow-lg hover:shadow-brand/10 transition-all cursor-pointer h-full flex flex-col"
+    >
       <div className="flex items-start justify-between mb-4">
         <div className="text-5xl">{tool.logo}</div>
         <TrendBadge trend={tool.trend} />
@@ -39,10 +46,16 @@ export function ToolCard({ tool }) {
         </div>
       </div>
 
-      <div className="w-full py-2 bg-gradient-to-r from-brand to-violet-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-brand/30 transition-all text-sm text-center">
+      <a
+        href={tool.affiliate_url || tool.website_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={e => e.stopPropagation()}
+        className="w-full py-2 bg-gradient-to-r from-brand to-violet-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-brand/30 transition-all text-sm text-center block mt-auto"
+      >
         Visit website →
-      </div>
-    </a>
+      </a>
+    </div>
   )
 }
 
