@@ -1,5 +1,8 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore'
+import { db } from '../config/firebase'
+import { useAuth } from '../hooks/useAuth'
 import { TOOLS } from '../data/tools'
 import Navbar from '../components/layout/Navbar'
 import BackgroundEffects from '../components/home/BackgroundEffects'
@@ -7,13 +10,38 @@ import BackgroundEffects from '../components/home/BackgroundEffects'
 const PROS_TAGS = ['⚡ Super fast', '🎯 On-brand', '🔥 Great templates', '📈 SEO ready', '🌍 Multi-lang', '🤝 Team collab', '💡 Very creative', '🚀 Scalable']
 const CONS_TAGS = ['💸 Too pricey', '🤖 Feels robotic', '📶 Needs editing', '🔒 No free tier', '🐢 Slow sometimes', '😵 Overwhelming']
 
-function ReviewWidget({ tool }) {
+function ReviewWidget({ tool, onReviewSubmitted }) {
+  const { user } = useAuth()
+  const navigate = useNavigate()
   const [sliderVal, setSliderVal] = useState(0)
   const [activeTags, setActiveTags] = useState([])
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [alreadyReviewed, setAlreadyReviewed] = useState(false)
+  const [checkingReview, setCheckingReview] = useState(true)
   const trackRef = useRef(null)
   const dragging = useRef(false)
   const MAX_TAGS = 3
+
+  useEffect(() => {
+    const checkExisting = async () => {
+      if (!user) { setCheckingReview(false); return }
+      try {
+        const q = query(
+          collection(db, 'reviews'),
+          where('toolSlug', '==', tool.slug),
+          where('userId', '==', user.uid)
+        )
+        const snap = await getDocs(q)
+        if (!snap.empty) setAlreadyReviewed(true)
+      } catch (err) {
+        console.error(err)
+      } finally {
+        setCheckingReview(false)
+      }
+    }
+    checkExisting()
+  }, [user, tool.slug])
 
   const getColor = (v) => {
     const stops = [
@@ -38,15 +66,8 @@ function ReviewWidget({ tool }) {
     return Math.min(Math.max(((clientX - rect.left) / rect.width) * 100, 0), 100)
   }
 
-  const handlePointerDown = (e) => {
-    dragging.current = true
-    setSliderVal(getVal(e))
-  }
-
-  const handlePointerMove = (e) => {
-    if (dragging.current) setSliderVal(getVal(e))
-  }
-
+  const handlePointerDown = (e) => { dragging.current = true; setSliderVal(getVal(e)) }
+  const handlePointerMove = (e) => { if (dragging.current) setSliderVal(getVal(e)) }
   const handlePointerUp = () => { dragging.current = false }
 
   const toggleTag = (tag) => {
@@ -57,11 +78,33 @@ function ReviewWidget({ tool }) {
     }
   }
 
+  const handleSubmit = async () => {
+    if (sliderVal === 0 || !user) return
+    setSubmitting(true)
+    try {
+      await addDoc(collection(db, 'reviews'), {
+        toolSlug: tool.slug,
+        toolName: tool.name,
+        userId: user.uid,
+        userEmail: user.email,
+        score: Math.round(sliderVal),
+        tags: activeTags,
+        createdAt: serverTimestamp()
+      })
+      setSubmitted(true)
+      if (onReviewSubmitted) onReviewSubmitted()
+    } catch (err) {
+      console.error('Error saving review:', err)
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
   const c = getColor(sliderVal)
 
   const getLabelStyle = (zone) => {
     let active = false
-    if (zone === 'weak' && sliderVal <= 33) active = sliderVal > 0
+    if (zone === 'weak' && sliderVal > 0 && sliderVal <= 33) active = true
     if (zone === 'solid' && sliderVal > 33 && sliderVal <= 66) active = true
     if (zone === 'god' && sliderVal > 66) active = true
     return {
@@ -72,9 +115,61 @@ function ReviewWidget({ tool }) {
     }
   }
 
+  // Loading
+  if (checkingReview) {
+    return (
+      <div className="rounded-2xl p-8 border text-center"
+        style={{ background: '#0f1425', borderColor: 'rgba(99,102,241,0.15)' }}>
+        <p className="text-slate-500 text-xs font-mono">// loading...</p>
+      </div>
+    )
+  }
+
+  // Non loggato
+  if (!user) {
+    return (
+      <div className="rounded-2xl p-8 border text-center"
+        style={{ background: '#0f1425', borderColor: 'rgba(99,102,241,0.15)' }}>
+        <div className="text-4xl mb-4">🔒</div>
+        <p className="text-gray-100 font-bold text-lg mb-2">Leave a review</p>
+        <p className="text-slate-500 text-sm mb-8 font-mono">// sign in or create an account to rate this tool</p>
+        <div className="flex gap-3 justify-center">
+          <button
+            onClick={() => navigate('/auth')}
+            className="px-6 py-2.5 rounded-xl text-white text-sm font-bold transition-all hover:-translate-y-0.5"
+            style={{ background: 'linear-gradient(to right, #6366f1, #8b5cf6)', boxShadow: '0 0 20px rgba(99,102,241,0.2)' }}
+          >
+            Sign In
+          </button>
+          <button
+            onClick={() => navigate('/auth?mode=register')}
+            className="px-6 py-2.5 rounded-xl text-gray-100 text-sm font-bold transition-all hover:border-brand/50"
+            style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(99,102,241,0.2)' }}
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  // Già recensito
+  if (alreadyReviewed) {
+    return (
+      <div className="rounded-2xl p-8 border text-center"
+        style={{ background: '#0f1425', borderColor: 'rgba(99,102,241,0.15)' }}>
+        <div className="text-4xl mb-4">✓</div>
+        <p className="text-gray-100 font-bold text-lg mb-2">Already reviewed!</p>
+        <p className="text-slate-500 text-sm font-mono">// you have already left a review for {tool.name}</p>
+      </div>
+    )
+  }
+
+  // Recensione inviata
   if (submitted) {
     return (
-      <div className="text-center py-16">
+      <div className="rounded-2xl p-8 border text-center"
+        style={{ background: '#0f1425', borderColor: 'rgba(99,102,241,0.15)' }}>
         <div className="text-5xl mb-4">✓</div>
         <p className="text-gray-100 font-bold text-xl mb-2">Review submitted!</p>
         <p className="text-slate-500 text-sm">Thanks for helping the community.</p>
@@ -137,10 +232,7 @@ function ReviewWidget({ tool }) {
         >
           <div
             className="h-full rounded-full pointer-events-none"
-            style={{
-              width: `${sliderVal}%`,
-              background: `linear-gradient(to right, #6366f1, ${c.css})`
-            }}
+            style={{ width: `${sliderVal}%`, background: `linear-gradient(to right, #6366f1, ${c.css})` }}
           />
           <div
             className="absolute top-1/2 w-5 h-5 rounded-full border-2 pointer-events-none"
@@ -206,7 +298,8 @@ function ReviewWidget({ tool }) {
 
       {/* Submit */}
       <button
-        onClick={() => sliderVal > 0 && setSubmitted(true)}
+        onClick={handleSubmit}
+        disabled={submitting || sliderVal === 0}
         className="w-full py-3 rounded-xl text-white text-xs font-bold font-mono tracking-widest transition-all"
         style={{
           background: sliderVal > 0
@@ -216,7 +309,7 @@ function ReviewWidget({ tool }) {
           cursor: sliderVal > 0 ? 'pointer' : 'not-allowed'
         }}
       >
-        SUBMIT REVIEW →
+        {submitting ? 'SUBMITTING...' : 'SUBMIT REVIEW →'}
       </button>
     </div>
   )
@@ -226,6 +319,39 @@ export default function ToolDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const tool = TOOLS.find(t => t.slug === slug)
+  const [communityTags, setCommunityTags] = useState([])
+  const [reviewCount, setReviewCount] = useState(0)
+
+  const loadReviews = async () => {
+    if (!tool) return
+    try {
+      const q = query(collection(db, 'reviews'), where('toolSlug', '==', tool.slug))
+      const snapshot = await getDocs(q)
+      const reviews = snapshot.docs.map(doc => doc.data())
+      setReviewCount(reviews.length)
+      const tagCount = {}
+      reviews.forEach(r => {
+        if (r.tags) r.tags.forEach(tag => {
+          tagCount[tag] = (tagCount[tag] || 0) + 1
+        })
+      })
+      const sorted = Object.entries(tagCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5)
+        .map(([text, count]) => ({
+          text,
+          pct: Math.round((count / reviews.length) * 100),
+          hot: PROS_TAGS.includes(text)
+        }))
+      setCommunityTags(sorted)
+    } catch (err) {
+      console.error('Error loading reviews:', err)
+    }
+  }
+
+  useEffect(() => {
+    loadReviews()
+  }, [tool?.slug])
 
   if (!tool) return <Navigate to="/explore" />
 
@@ -236,14 +362,6 @@ export default function ToolDetail() {
     pay_per_use: 'Pay per use'
   }[tool.pricing.model] || tool.pricing.model
 
-  const communityTags = [
-    { text: '⚡ Super fast', pct: 78, hot: true },
-    { text: '🎯 On-brand', pct: 65, hot: true },
-    { text: '💸 Too pricey', pct: 54, hot: false },
-    { text: '🔥 Great templates', pct: 49, hot: true },
-    { text: '🤖 Feels robotic', pct: 38, hot: false },
-  ]
-
   return (
     <div className="min-h-screen bg-dark-950 text-gray-200 relative overflow-x-hidden">
       <BackgroundEffects />
@@ -251,7 +369,6 @@ export default function ToolDetail() {
 
       <div className="relative z-5 max-w-[720px] mx-auto px-6 pt-16 pb-20">
 
-        {/* Back */}
         <button
           onClick={() => navigate('/explore')}
           className="flex items-center gap-2 text-slate-500 hover:text-gray-300 transition-colors mb-10 text-sm font-mono"
@@ -297,21 +414,25 @@ export default function ToolDetail() {
         </div>
 
         {/* Community top tags */}
-        <div className="mb-8">
-          <div className="text-[10px] text-white/25 tracking-widest uppercase font-mono mb-4">// community top tags</div>
-          <div className="flex flex-wrap gap-2">
-            {communityTags.map(ct => (
-              <span key={ct.text} className="px-3 py-1.5 rounded-full text-xs font-mono font-semibold border"
-                style={{
-                  borderColor: ct.hot ? 'rgba(139,92,246,0.4)' : 'rgba(99,102,241,0.3)',
-                  color: ct.hot ? 'rgba(167,139,250,0.9)' : 'rgba(129,140,248,0.7)',
-                  background: ct.hot ? 'rgba(139,92,246,0.08)' : 'rgba(99,102,241,0.06)'
-                }}>
-                {ct.text} <span className="opacity-50">{ct.pct}%</span>
-              </span>
-            ))}
+        {communityTags.length > 0 && (
+          <div className="mb-8">
+            <div className="text-[10px] text-white/25 tracking-widest uppercase font-mono mb-4">
+              // community top tags · {reviewCount} review{reviewCount !== 1 ? 's' : ''}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {communityTags.map(ct => (
+                <span key={ct.text} className="px-3 py-1.5 rounded-full text-xs font-mono font-semibold border"
+                  style={{
+                    borderColor: ct.hot ? 'rgba(139,92,246,0.4)' : 'rgba(99,102,241,0.3)',
+                    color: ct.hot ? 'rgba(167,139,250,0.9)' : 'rgba(129,140,248,0.7)',
+                    background: ct.hot ? 'rgba(139,92,246,0.08)' : 'rgba(99,102,241,0.06)'
+                  }}>
+                  {ct.text} <span className="opacity-50">{ct.pct}%</span>
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Pricing */}
         <div className="rounded-2xl p-6 mb-8"
@@ -348,8 +469,8 @@ export default function ToolDetail() {
           </div>
         </div>
 
-        {/* Review widget — protagonista */}
-        <ReviewWidget tool={tool} />
+        {/* Review widget */}
+        <ReviewWidget tool={tool} onReviewSubmitted={loadReviews} />
 
       </div>
     </div>
