@@ -22,27 +22,13 @@ export default function Navbar() {
       </Link>
 
       <div className="flex gap-8 items-center">
-        {["Explore", "Compare", "Trending"].map(item => (
-          <Link
-            key={item}
-            to={item === "Explore" ? "/explore" : "#"}
-            className="text-sm font-medium text-slate-500 hover:text-brand-lighter transition-colors hidden md:block"
-          >
-            {item}
-          </Link>
-        ))}
-
-        <div className="w-px h-5 bg-white/[0.08] hidden md:block" />
-
         <span className="text-sm font-medium text-brand-light hover:text-brand-lighter transition-colors cursor-pointer hidden md:block">
           Submit Tool
         </span>
 
-        {/* Auth section */}
         {loading ? (
           <div className="w-10 h-10 bg-dark-900 rounded-full animate-pulse" />
         ) : user ? (
-          // User is logged in
           <div className="relative">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
@@ -56,7 +42,6 @@ export default function Navbar() {
               </span>
             </button>
 
-            {/* Dropdown menu */}
             {showDropdown && (
               <div className="absolute right-0 top-full mt-2 w-48 bg-dark-900 border border-brand/20 rounded-lg shadow-lg overflow-hidden">
                 <Link
@@ -78,7 +63,6 @@ export default function Navbar() {
             )}
           </div>
         ) : (
-          // User is NOT logged in
           <Link
             to="/auth"
             className="relative overflow-hidden px-5 py-2 rounded-lg bg-gradient-to-r from-brand to-violet-600 text-white text-sm font-semibold hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/30 transition-all"
