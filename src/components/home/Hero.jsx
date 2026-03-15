@@ -14,9 +14,9 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative z-5 text-center px-6 md:px-12 pt-16 md:pt-20 pb-8 max-w-[860px] mx-auto">
+    <section className="relative z-5 text-center px-6 md:px-12 pt-14 md:pt-18 pb-6 max-w-[860px] mx-auto">
       {/* Live badge */}
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/[0.06] border border-brand/[0.15] mb-8">
+      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/[0.06] border border-brand/[0.15] mb-7">
         <div className="w-1.5 h-1.5 rounded-full bg-brand shadow-[0_0_8px_rgba(99,102,241,0.6)] animate-breathe" />
         <span className="text-[12.5px] font-medium text-brand-lighter font-mono tracking-wide">
           2,847 AI tools tracked in real-time
@@ -24,18 +24,17 @@ export default function Hero() {
       </div>
 
       {/* Headline */}
-      <h1 className="text-5xl md:text-7xl font-black tracking-[-3.5px] leading-[1.06] mb-7">
+      <h1 className="text-5xl md:text-7xl font-black tracking-[-3.5px] leading-[1.06] mb-6">
         <span className="text-gray-100">AI is a </span>
         <span className="text-gradient-brand">mess.</span>
         <br />
         <span className="text-gray-100">We put it </span>
-        <span className="text-gradient-green">in order.</span>
+        <span className="text-gradient-brand">in order.</span>
       </h1>
 
       {/* Subtitle */}
-      <p className="text-lg text-slate-500 max-w-[500px] mx-auto mb-11 leading-relaxed">
+      <p className="text-base md:text-lg text-slate-400 max-w-[480px] mx-auto mb-9 leading-relaxed">
         Find, compare and choose the right AI tool for anything.
-        <br />
         Reviewed, explained, no bullshit.
       </p>
 
@@ -61,23 +60,23 @@ export default function Hero() {
         </button>
       </div>
 
-      {/* Word cloud */}
-      <div className="relative mt-6 h-[72px] max-w-[600px] mx-auto select-none pointer-events-none">
+      {/* Word cloud — posizioni ricalcolate, no sovrapposizioni */}
+      <div className="relative mt-5 h-[68px] max-w-[600px] mx-auto select-none pointer-events-none overflow-hidden">
         {[
-          { text: 'music',            color: '#6366f1', size: '15px', top: '0px',  left: '10%' },
-          { text: 'remove background',color: '#94a3b8', size: '11px', top: '8px',  left: '28%' },
-          { text: 'video',            color: '#a78bfa', size: '18px', top: '2px',  left: '60%' },
-          { text: 'copywriting',      color: '#64748b', size: '10px', top: '36px', left: '5%'  },
-          { text: 'AI images',        color: '#818cf8', size: '13px', top: '32px', left: '28%' },
-          { text: 'coding',           color: '#c4b5fd', size: '12px', top: '30px', left: '60%' },
-          { text: 'voiceover',        color: '#94a3b8', size: '11px', top: '56px', left: '15%' },
-          { text: 'avatar',           color: '#6366f1', size: '13px', top: '52px', left: '42%' },
-          { text: 'logo',             color: '#a78bfa', size: '11px', top: '54px', left: '72%' },
-          { text: 'captions',         color: '#64748b', size: '10px', top: '14px', left: '76%' },
+          { text: 'music',             color: '#6366f1', size: '14px', top: '2px',  left: '2%'  },
+          { text: 'remove background', color: '#94a3b8', size: '10px', top: '6px',  left: '22%' },
+          { text: 'video',             color: '#a78bfa', size: '17px', top: '0px',  left: '62%' },
+          { text: 'captions',          color: '#64748b', size: '10px', top: '4px',  left: '80%' },
+          { text: 'copywriting',       color: '#64748b', size: '10px', top: '34px', left: '2%'  },
+          { text: 'AI images',         color: '#818cf8', size: '13px', top: '30px', left: '26%' },
+          { text: 'coding',            color: '#c4b5fd', size: '12px', top: '28px', left: '55%' },
+          { text: 'voiceover',         color: '#94a3b8', size: '11px', top: '28px', left: '76%' },
+          { text: 'avatar',            color: '#6366f1', size: '12px', top: '52px', left: '18%' },
+          { text: 'logo',              color: '#a78bfa', size: '11px', top: '50px', left: '48%' },
         ].map(({ text, color, size, top, left }) => (
           <span
             key={text}
-            style={{ color, fontSize: size, top, left, position: 'absolute', fontFamily: 'monospace', letterSpacing: '0.05em' }}
+            style={{ color, fontSize: size, top, left, position: 'absolute', fontFamily: 'monospace', letterSpacing: '0.05em', opacity: 0.75 }}
           >
             {text}
           </span>

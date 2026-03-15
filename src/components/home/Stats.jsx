@@ -19,36 +19,29 @@ export default function Stats() {
         }
       }, 16)
     }
-
     animateCounter(setToolsCount, 2847)
     animateCounter(setCategoriesCount, 156)
     animateCounter(setUsersCount, 500)
   }, [])
 
+  const stats = [
+    { value: `${toolsCount.toLocaleString()}+`, label: 'AI Tools' },
+    { value: `${categoriesCount}`,              label: 'Categories' },
+    { value: `${usersCount.toLocaleString()}K+`,label: 'Community' },
+  ]
+
   return (
-    <section className="relative z-5 py-16 px-6 md:px-12">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-3 gap-8 md:gap-16">
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-brand to-violet-600 bg-clip-text mb-2">
-              {toolsCount.toLocaleString()}+
+    <section className="relative z-5 py-10 px-6 md:px-12">
+      <div className="max-w-[700px] mx-auto">
+        <div className="grid grid-cols-3 gap-6 md:gap-12">
+          {stats.map(({ value, label }) => (
+            <div key={label} className="text-center">
+              <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-brand to-violet-500 bg-clip-text mb-1.5">
+                {value}
+              </div>
+              <p className="text-slate-500 text-sm">{label}</p>
             </div>
-            <p className="text-slate-500 text-sm md:text-base">AI Tools</p>
-          </div>
-
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-emerald-400 to-green-600 bg-clip-text mb-2">
-              {categoriesCount}
-            </div>
-            <p className="text-slate-500 text-sm md:text-base">Categories</p>
-          </div>
-
-          <div className="text-center">
-            <div className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-pink-400 to-rose-600 bg-clip-text mb-2">
-              {usersCount.toLocaleString()}K+
-            </div>
-            <p className="text-slate-500 text-sm md:text-base">Community</p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
